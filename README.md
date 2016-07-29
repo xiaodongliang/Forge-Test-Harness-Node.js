@@ -2,7 +2,7 @@
 
 ## Description
 
-This harness mainly for test endpoints or workflow of Data Management, Derivative, and Forge Viewer.
+This harness mainly for test endpoints or workflow of Data Management, Derivative, and Forge Viewer. It is based on the skeleton from the tutorial: https://github.com/Developer-Autodesk/viewer-javascript-tutorial
 
 ## Setup
 
