@@ -12,6 +12,7 @@ var lmv =require ('./lmv.js') ;
 var uploadFileFolder = 'upload_model';
 
 router.get ('/gettoken', function (req, res) {
+
     var returnV = lmv.Lmv.getToken();
     if(returnV.validtoken != 'undefined') {
         res.send({access_token:returnV});
@@ -19,6 +20,7 @@ router.get ('/gettoken', function (req, res) {
 });
 
 router.post ('/file', function (req, res) {
+
 
     var filename ='' ;
 
@@ -45,13 +47,38 @@ router.post ('/file', function (req, res) {
 
 
 router.post ('/translate', function (req, res) {
+
+    var key = req.body.key ;
+    var secret = req.body.secret ;
+    lmv.Lmv.setKeys(key,secret);
+
     var filename = req.body.name ;
     var iszip = req.body.iszip;
     var mainfile = req.body.rootfile;
 
 
     async.waterfall ([
-        function (callbacks1) {
+
+        function (callbacks0) {
+            console.log ('Trying to get token') ;
+            new lmv.Lmv ().refreshToken1 ()
+                .on ('success', function (data) {
+                    console.log ('get token') ;
+                    callbacks0 (null, data) ;
+                })
+                .on ('fail', function (err) {
+                    console.log ('Failed to get token!') ;
+                    callbacks0 (err) ;
+                })
+            ;
+        },
+        function (arg,callbacks) {
+            console.log ('Trying to store token') ;
+            fs.writeFileSync('data/token.json', JSON.stringify (arg));
+             callbacks (null,arg) ;
+        },
+
+        function (arg0,callbacks1) {
             console.log ('Trying to Create Bucket') ;
             new lmv.Lmv ().createBucket ()
                 .on ('success', function (data) {
