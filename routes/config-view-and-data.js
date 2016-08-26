@@ -33,10 +33,16 @@ module.exports = {
     client_id: process.env.LMV_CONSUMERKEY || '<Your Key>',
     client_secret: process.env.LMV_CONSUMERSECRET || '<Your Secret>',
     grant_type: 'client_credentials',
-    scope: 'data:read data:create data:write bucket:read bucket:create'
+    /*scope: [
+      'bucket:create',
+      'bucket:read',
+      'bucket:update',
+      'data:create',
+      'data:read',
+      'data:write']*/
+
+    scope: 'bucket:create data:read data:create data:write bucket:read'
   },
-
-
   // API EndPoints
   endPoints:{
 
