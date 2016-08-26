@@ -30,13 +30,21 @@ var config = require('./config-view-and-data.js');
 
 // LMV object
 function Lmv () {
-
      events.EventEmitter.call (this) ;
 }
 
 util.inherits (Lmv, events.EventEmitter) ;
 
+Lmv.setKeys =function (key,secret) {
+    config.credentials.client_id = key;
+    config.credentials.client_secret = secret;
+
+    return ('') ;
+} ;
+
 Lmv.getToken =function () {
+
+
     try {
         var data =fs.readFileSync ('data/token.json') ;
         var authResponse =JSON.parse (data) ;
@@ -74,14 +82,43 @@ Lmv.refreshToken =function () {
         }) ;
 } ;
 
-Lmv.prototype.createBucket =function () {
+Lmv.prototype.refreshToken1 =function () {
+    console.log ('Refreshing Autodesk Service token') ;
 
     var self =this ;
+    unirest.post (config.endPoints.authenticate)
+        .header ('Accept', 'application/x-www-form-urlencoded')
+        .send (config.credentials)
+        .end (function (response) {
+            try {
+                if ( response.statusCode != 200 )
+                    throw response ;
+                var authResponse =response.body ;
+                self.token  = authResponse.access_token;
+                console.log ('Token: ' + JSON.stringify (authResponse)) ;
+                fs.writeFile ('data/token.json', JSON.stringify (authResponse), function (err) {
+                    if ( err )
+                        throw err ;
+                }) ;
+                 self.emit ('success',authResponse  ) ;
+            } catch ( err ) {
+                if(fs.existsSync ('data/token.json'))
+                    fs.unlinkSync ('data/token.json') ;
+                console.log ('Token: ERROR! (' + response.statusCode + ')') ;
+                self.emit ('fail', err) ;
+
+            }
+        }) ;
+    return (this) ;
+} ;
+
+Lmv.prototype.createBucket =function () {
+     var self =this ;
     unirest.post (config.endPoints.createBucket)
         .header ('Accept', 'application/json')
         .header ('Content-Type', 'application/json')
         .header ('Authorization', 'Bearer ' + Lmv.getToken ())
-        .send ({ 'bucketKey': config.defaultBucketKey, 'policyKey': 'transient' })
+        .send ({ 'bucketKey': config.defaultBucketKey+config.credentials.client_id.toLowerCase() , 'policyKey': 'transient' })
         .end (function (response) {
             try {
                 if ( response.statusCode != 200 &&
@@ -242,4 +279,20 @@ function initializeApp () {
     Lmv.refreshToken () ; // and now!
 }
 
-initializeApp () ;
+
+function myguid() {
+
+    var d = new Date().getTime();
+
+    var guid = 'xxxx-xxxx-xxxx-xxxx-xxxx'.replace(
+        /[xy]/g,
+        function (c) {
+            var r = (d + Math.random() * 16) % 16 | 0;
+            d = Math.floor(d / 16);
+            return (c == 'x' ? r : (r & 0x7 | 0x8)).toString(16);
+        });
+
+    return guid;
+}
+
+//initializeApp () ;
