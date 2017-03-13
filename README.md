@@ -2,7 +2,7 @@
 
 ## Description
 
-This harness mainly for test endpoints or workflow of Data Management, Derivative, and Forge Viewer. It is based on the skeleton from the tutorial: https://github.com/Developer-Autodesk/viewer-javascript-tutorial
+This harness mainly for demoing how Forge MD extacts model data 
 
 ## Setup
 
@@ -23,12 +23,13 @@ This harness mainly for test endpoints or workflow of Data Management, Derivativ
 * $ node server.js 
 * Open a browser to visit `localhost:3000/upload.html`
 * * Click `choose file` to select a model. Click [Translate this one for me]. 
-* If it is a composite file (a root file links to other dependent files), compress all files to an zip and choose the zip. In addition, tick [Composite File], input the [Root File Name].
 * Wait the process of translation completes. If it succeeds, a new item (urn) will be added to the list under `URN List`
 * Click one item in the list, a new page will pop out to load the model from your Forge repository as usual. i.e. on-line model
+* click [Get Meta Data], the model strcuture will be displayed at the bottom of the page
+* click [Get Model Properties], the objects properties will be dispplayed at the bottom of the page
  
 ## To Do
-* Add resumable uploading
+* 
 
 ## License
 
