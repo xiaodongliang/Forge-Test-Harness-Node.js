@@ -43,7 +43,7 @@ module.exports = {
 
     scope: 'bucket:create data:read data:create data:write bucket:read'
   },
-  // API EndPoints
+// API EndPoints
   endPoints:{
 
     authenticate:     BASE_URL + '/authentication/v1/authenticate',
@@ -58,6 +58,10 @@ module.exports = {
     //model derivative
     translate:         BASE_URL + '/modelderivative/' + VERSION + '/designdata/job',
     manifest:         BASE_URL + '/modelderivative/' + VERSION + '/designdata/%s/manifest',
+    metadata:         BASE_URL + '/modelderivative/' + VERSION + '/designdata/%s/metadata',
+    metadataGuid:         BASE_URL + '/modelderivative/' + VERSION + '/designdata/%s/metadata/%s',
+    metadataProperties:         BASE_URL + '/modelderivative/' + VERSION + '/designdata/%s/metadata/%s/properties',
+
     derivatives:      BASE_URL + '/modelderivative/' + VERSION + '/designdata/%s/manifest/%s',
    }
 }
