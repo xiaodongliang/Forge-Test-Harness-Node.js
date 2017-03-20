@@ -2,7 +2,9 @@
 
 ## Description
 
-This harness mainly for test endpoints or workflow of Data Management, Derivative, and Forge Viewer. It is based on the skeleton from the tutorial: https://github.com/Developer-Autodesk/viewer-javascript-tutorial
+This harness mainly for test aggregate models in Forge Viewer. In current version, only off-line mode has been written. I will add on-line model soon. 
+
+The off-line models dataset and off-line libraries are from https://extract.autodesk.io 
 
 ## Setup
 
@@ -21,14 +23,13 @@ This harness mainly for test endpoints or workflow of Data Management, Derivativ
 ## Test
 
 * $ node server.js 
-* Open a browser to visit `localhost:3000/upload.html`
-* * Click `choose file` to select a model. Click [Translate this one for me]. 
-* If it is a composite file (a root file links to other dependent files), compress all files to an zip and choose the zip. In addition, tick [Composite File], input the [Root File Name].
-* Wait the process of translation completes. If it succeeds, a new item (urn) will be added to the list under `URN List`
-* Click one item in the list, a new page will pop out to load the model from your Forge repository as usual. i.e. on-line model
+* Open a browser to visit `localhost:3002/upload.html`
+* A base model will be loaded in default.
+* Click [Load Second Model], the second model will be loaded. 
+* Click [Unload Second Model], the second model will be unloaded.
  
 ## To Do
-* Add resumable uploading
+* 
 
 ## License
 
