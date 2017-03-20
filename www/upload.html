@@ -1,49 +1,52 @@
 <html>
 <head>
-    <title>ADN Viewer Demo (server upload)</title>
+    <title>Forge Viewer Demo (server upload)</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+
     <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+ 
+      <link href="jsontree/css/jsontree.css" rel="stylesheet">
+        <script src="jsontree/js/jsontree.min.js"></script>
+
 
     <!-- jquery -->
     <script src="https://code.jquery.com/jquery-2.1.2.min.js"></script>
 
+
     <!-- Bootstrap CSS -->
     <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" />
-
+ 
     <script src="/upload.js"></script>
 </head>
 
-
-
 <body>
 <div class="container">
-         Key<input class="form-control" type="text" id="key" name="urn" value="" >
-
-
-          Secret<input class="form-control" type="text" id="secret" name="urn" value="" >
-
     <div class="panel panel-default">
         <div class="panel-heading">
-            <h3 class="panel-title">Upload and translate a file</h3>
+            <h3 class="panel-title">上载模型，提取数据</h3>
         </div>
-
         <div class="panel-body">
             <input class="form-control" type="file" id="files" name="files" multiple />
             <br />
-            <div style="text-align: center;">
-                <a class="btn btn-primary" id="btnTranslateThisOne">Translate this one for me</a>
-            </div>
-            <div class="checkbox">
-                <label>
-                    <input id= "iszip" type="checkbox"> Composite File
-                </label>
-            </div>
-            <div class="col-md-8">
-                Root File Name<input class="form-control" type="text" id="rootfile" name="urn" value="" >
-            </div>
-            <br />
-            <br />
-            <br />
-            <div style="color:#FF0000;" id="msg"></div>
+
+            
+
+            <div class="row">
+                <div style="text-align: left;">
+                    <a class="btn btn-primary" id="btnTranslateThisOne">提取模型数据</a>
+                </div>
+                
+
+                <div style="text-align: center;">
+                    <a class="btn btn-primary" id="btnGetMetaData">模型层次结构</a>
+                </div>
+
+                <div style="text-align: right;">
+                    <a class="btn btn-primary" id="btnGetProperties">模型构件属性</a>
+                </div> 
+             </div> 
+            <div id="msg"></div>
         </div>
     </div>
 </div>
@@ -51,33 +54,24 @@
 <div class="container">
     <div class="panel panel-default">
         <div class="panel-heading">
-            <h3 class="panel-title">My URNs</h3>
+            <h3 class="panel-title">模型列表</h3>
         </div>
-        <div class="panel-body">
-            <div class="row">
-                <div class="col-md-8">
-                    <input class="form-control" type="text" id="urn" name="urn" value="" />
-                </div>
-                <div class="col-md-4">
-                    <a class="btn btn-primary" id="btnAddThisOne">Add to the list</a>
-                </div>
-            </div>
-
-
-
-            <br />
-            <br />
-            <br />
-            <legend>My URN list</legend>
-            <div>Click on a urn below to launch the viewer</div>
-            <div id="list"></div>
-        </div>
-
-
-
+        <div class="panel-body"> 
+             <div id="list"></div>  
+        </div> 
     </div>
+
+    <div id="jstree_demo_div"></div>
+
 </div>
 
 
 </body>
+
+<script>
+
+    var json = {"尚无数据" : "true"};
+    document.getElementById("jstree_demo_div").innerHTML = JSONTree.create(json);
+    </script>
+
 </html>

@@ -35,16 +35,7 @@ function Lmv () {
 
 util.inherits (Lmv, events.EventEmitter) ;
 
-Lmv.setKeys =function (key,secret) {
-    config.credentials.client_id = key;
-    config.credentials.client_secret = secret;
-
-    return ('') ;
-} ;
-
 Lmv.getToken =function () {
-
-
     try {
         var data =fs.readFileSync ('data/token.json') ;
         var authResponse =JSON.parse (data) ;
@@ -58,7 +49,6 @@ Lmv.getToken =function () {
 
 Lmv.refreshToken =function () {
     console.log ('Refreshing Autodesk Service token') ;
-
     var self =this ;
     unirest.post (config.endPoints.authenticate)
         .header ('Accept', 'application/json')
@@ -82,48 +72,22 @@ Lmv.refreshToken =function () {
         }) ;
 } ;
 
-Lmv.prototype.refreshToken1 =function () {
-    console.log ('Refreshing Autodesk Service token') ;
+Lmv.prototype.createBucket =function () {
 
     var self =this ;
-    unirest.post (config.endPoints.authenticate)
-        .header ('Accept', 'application/x-www-form-urlencoded')
-        .send (config.credentials)
-        .end (function (response) {
-            try {
-                if ( response.statusCode != 200 )
-                    throw response ;
-                var authResponse =response.body ;
-                self.token  = authResponse.access_token;
-                console.log ('Token: ' + JSON.stringify (authResponse)) ;
-                fs.writeFile ('data/token.json', JSON.stringify (authResponse), function (err) {
-                    if ( err )
-                        throw err ;
-                }) ;
-                 self.emit ('success',authResponse  ) ;
-            } catch ( err ) {
-                if(fs.existsSync ('data/token.json'))
-                    fs.unlinkSync ('data/token.json') ;
-                console.log ('Token: ERROR! (' + response.statusCode + ')') ;
-                self.emit ('fail', err) ;
-
-            }
-        }) ;
-    return (this) ;
-} ;
-
-Lmv.prototype.createBucket =function () {
-     var self =this ;
     unirest.post (config.endPoints.createBucket)
         .header ('Accept', 'application/json')
         .header ('Content-Type', 'application/json')
         .header ('Authorization', 'Bearer ' + Lmv.getToken ())
-        .send ({ 'bucketKey': config.defaultBucketKey+config.credentials.client_id.toLowerCase() , 'policyKey': 'transient' })
+        .send ({ 'bucketKey': config.defaultBucketKey, 'policyKey': 'transient' })
         .end (function (response) {
             try {
                 if ( response.statusCode != 200 &&
                     response.statusCode != 409  )
+                {
+                    console.log('bucket' + response.statusCode);
                     throw response ;
+                }
                 self.emit ('success', config.defaultBucketKey) ;
             } catch ( err ) {
                 self.emit ('fail', err) ;
@@ -168,6 +132,93 @@ Lmv.prototype.uploadFile =function (filename) {
     }) ;
     return (this) ;
 } ;
+
+Lmv.prototype.resumableUpload = function(filename) {
+
+    var promise = new Promise(function(resolve, reject) {
+
+        fs.stat(filename, function (err, stats) {
+
+            if (err) {
+                reject(err);
+                return;
+            }
+
+            var total = stats.size ;
+            var chunkSize = config.fileResumableChunk * 1024 * 1024 ;
+            var nbChunks = Math.round (0.5 + total / chunkSize) ;
+
+            var resumableUploadUrl = util.format (
+                config.endPoints.resumableUpload,
+                config.defaultBucketKey, filename.replace (/ /g, '+')) ;
+
+            var sessionId = 'adn-lmv-' + guid();
+
+            // pipe is better since it avoids loading all in memory
+            var fctChunks = function (n, chunkSize) {
+
+                return (function (callback) {
+
+                    var start = n * chunkSize ;
+                    var end = Math.min (total, (n + 1) * chunkSize) - 1 ;
+                    var contentRange ='bytes '
+                        + start + '-'
+                        + end + '/'
+                        + total ;
+
+                    var readStream = fs.createReadStream (filename, {'start': start, 'end': end});
+
+                    readStream.pipe (
+                        request.put({
+                                url: resumableUploadUrl,
+                                headers: {
+                                    'Authorization': 'Bearer ' + Lmv.getToken (),
+                                    'Content-Type': 'application/octet-stream',
+                                    'Content-Range': contentRange,
+                                    'Session-Id': sessionId
+                                }
+                            },
+                            function (error, res, body) {
+
+                                if(res.statusCode == 200 || res.statusCode == 202){
+                                    //if(progressCallback)
+                                     //   progressCallback(n,nbChunks);
+                                    callback (null, body ? JSON.parse(body) : '');
+                                }
+                                else {
+                                    callback(err, null) ;
+                                }
+                            }));
+                });
+            };
+
+            var fctChunksArray = Array.apply(null, { length: nbChunks }).map(Number.call, Number);
+
+            for ( var i =0 ; i < fctChunksArray.length ; i++)
+                fctChunksArray[i] = fctChunks (i, chunkSize);
+
+            async.parallelLimit (
+                fctChunksArray,
+                10,
+                function (err, results) {
+                    if (errerr) {
+                        self.emit ('failed:', err) ;
+                    }
+                    else {
+
+                        if(results.length == nbChunks) {
+                            self.emit ('succesful uploading') ;
+                        }
+                        else {
+                            self.emit ('incomplete upload', err) ;
+                         }
+                    }
+                });
+        });
+    });
+
+    return promise;
+};
 
 Lmv.prototype.translate =function (urn,iszip,rootfile) {
     var self =this ;
@@ -255,6 +306,102 @@ Lmv.prototype.status =function (urn, params) {
     return (this) ;
 } ;
 
+Lmv.prototype.metadata =function (urn, params) {
+    var self =this ;
+
+    var statusUrl = util.format(
+        config.endPoints.metadata,urn );
+
+    params =params || {} ;
+
+    unirest.get (statusUrl)
+        .headers ({
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            'Authorization': ('Bearer ' + Lmv.getToken ())
+        })
+        .query (params)
+        .end (function (response) {
+            try {
+                if ( response.statusCode != 200 )
+                    throw response ;
+                try {
+                    self.emit ('success', response.body) ;
+                } catch ( err ) {
+                }
+            } catch ( err ) {
+                self.emit ('fail', err) ;
+            }
+        })
+    ;
+    return (this) ;
+} ;
+
+Lmv.prototype.metadataGuid =function (urn,guid,params) {
+    var self =this ;
+
+    var statusUrl = util.format(
+        config.endPoints.metadataGuid,urn,guid );
+
+    params =params || {} ;
+
+    unirest.get (statusUrl)
+        .headers ({
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            'Authorization': ('Bearer ' + Lmv.getToken ())
+        })
+        .query (params)
+        .end (function (response) {
+            try {
+                if ( response.statusCode != 200 && response.statusCode != 202)
+                    throw response ;
+                try {
+                    var thisRes = {urn:urn,guid:guid,body: response.body};
+                    self.emit ('success', thisRes) ;
+                } catch ( err ) {
+                }
+            } catch ( err ) {
+                self.emit ('fail', err) ;
+            }
+        })
+    ;
+    return (this) ;
+} ;
+
+Lmv.prototype.metadataProp =function (urn,guid,params) {
+    var self =this ;
+
+    var statusUrl = util.format(
+        config.endPoints.metadataPro,urn,guid );
+
+    params =params || {} ;
+
+    unirest.get (statusUrl)
+        .headers ({
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            'Authorization': ('Bearer ' + Lmv.getToken ())
+        })
+        .query (params)
+        .end (function (response) {
+            try {
+                if ( response.statusCode != 200 && response.statusCode != 202)
+                    throw response ;
+                try {
+                    var thisRes = {urn:urn,guid:guid,body: response.body};
+                    self.emit ('success', thisRes) ;
+                } catch ( err ) {
+                }
+            } catch ( err ) {
+                self.emit ('fail', err) ;
+            }
+        })
+    ;
+    return (this) ;
+} ;
+
+
 var router =express.Router () ;
 router.Lmv =Lmv ;
 module.exports =router ;
@@ -274,25 +421,9 @@ if ( !Number.isInteger ) {
 
 // Initialization
 function initializeApp () {
-    var seconds =1700 ; // Service returns 1799 seconds bearer token
+    var seconds =8000 ; // Service returns 86399 seconds bearer token
     setInterval (Lmv.refreshToken, seconds * 1000) ;
     Lmv.refreshToken () ; // and now!
 }
 
-
-function myguid() {
-
-    var d = new Date().getTime();
-
-    var guid = 'xxxx-xxxx-xxxx-xxxx-xxxx'.replace(
-        /[xy]/g,
-        function (c) {
-            var r = (d + Math.random() * 16) % 16 | 0;
-            d = Math.floor(d / 16);
-            return (c == 'x' ? r : (r & 0x7 | 0x8)).toString(16);
-        });
-
-    return guid;
-}
-
-//initializeApp () ;
+initializeApp () ;

@@ -3,6 +3,9 @@ var currenturn = '';
 $(document).ready (function () {
 
     $('#btnTranslateThisOne').click (function (evt) {
+
+        $("#jstree_demo_div").html(""); 
+
         var files =document.getElementById ('files').files ;
         if ( files.length == 0 )
             return ;
@@ -23,7 +26,7 @@ $(document).ready (function () {
                 complete: null
             }).done (function (data) {
                 $('#msg').text (value.name + ' file uploaded on your server') ;
-                var paramToTrans  = {name:data.name,iszip: $('#iszip').prop('checked'),rootfile: $('#rootfile').prop('value')};
+                var paramToTrans  = {name:data.name,iszip: false,rootfile: ''};
                 translate (paramToTrans) ;
             }).fail (function (xhr, ajaxOptions, thrownError) {
                 $('#msg').text (value.name + ' upload failed!') ;
@@ -32,12 +35,68 @@ $(document).ready (function () {
 
     }) ;
 
-    $('#btnAddThisOne').click (function (evt) {
-        var urn =$('#urn').val ().trim () ;
-        if ( urn == '' )
+     
+
+    $('#btnGetMetaData').click (function (evt) {
+         if ( currenturn == '' )
             return ;
-        AddThisOne (urn) ;
+
+         $('#msg').text (currenturn + ' metadata request...') ;
+            $.ajax ({
+                url: '/ForgeRoute/startMetadata/'+ currenturn ,
+                type: 'get',
+                 timeout: 0,
+                contentType: 'application/json',
+                complete: null
+            }).done (function (response) {
+                $('#msg').text (response.guid + ' metadata requested...') ;
+                if(response.body.data){
+                    prepareTree(response.body);
+                 }
+                else {
+                    setTimeout(function () {
+                        getMetaDataProgress(response.urn,response.guid);
+                    }, 5000);
+                }
+                //thisurn = response.urn;
+
+                var guid = 0;
+            }).fail (function (xhr, ajaxOptions, thrownError) {
+                $('#msg').text (data.name + ' translation request failed!') ;
+            }) ;
+
+     }) ;
+
+    $('#btnGetProperties').click (function (evt) {
+         if ( currenturn == '' )
+            return ;
+
+        $('#msg').text (currenturn + ' prop request...') ;
+        $.ajax ({
+            url: '/ForgeRoute/startGuidPro/'+ currenturn ,
+            type: 'get',
+            timeout: 0,
+            contentType: 'application/json',
+            complete: null
+        }).done (function (response) {
+            $('#msg').text (response.guid + ' prop requested...') ;
+            if(response.body){
+                prepareTree(response.body);
+            }
+            else {
+                setTimeout(function () {
+                    getPropProgress(response.urn,response.guid);
+                }, 5000);
+            }
+            //thisurn = response.urn;
+
+            var guid = 0;
+        }).fail (function (xhr, ajaxOptions, thrownError) {
+            $('#msg').text (data.name + ' translation request failed!') ;
+        }) ;
     }) ;
+
+
 
 }) ;
 
@@ -79,16 +138,66 @@ function translateProgress (urn) {
         contentType: 'application/json',
         complete: null
     }).done (function (response) {
+        currenturn = response.urn;
+
         if ( response.progress == 'complete' ) {
             AddThisOne (response.urn) ;
-            $('#msg').text ('') ;
+             $('#msg').text ('') ;
         } else {
             var name =window.atob (urn) ;
             var filename =name.replace (/^.*[\\\/]/, '') ;
             $('#msg').text (filename + ': ' + response.progress) ;
-            setTimeout (function () { translateProgress (urn) ; }, 500) ;
+            setTimeout (function () { translateProgress (currenturn) ; }, 500) ;
         }
     }).fail (function (xhr, ajaxOptions, thrownError) {
         $('#msg').text ('Progress request failed!') ;
     }) ;
 }
+
+function getMetaDataProgress (urn,guid) {
+    $.ajax ({
+        url: '/ForgeRoute/startMetadata/' + currenturn + '/' + guid,
+        type: 'get',
+        data: null,
+        contentType: 'application/json',
+        complete: null
+    }).done (function (response) {
+        if ( response.body.data) {
+                prepareTree(response.body);
+
+        } else {
+            setTimeout (function () { getMetaDataProgress (currenturn,guid) ; }, 500) ;
+        }
+    }).fail (function (xhr, ajaxOptions, thrownError) {
+        $('#msg').text ('get metadata request failed!') ;
+    }) ;
+}
+
+function getPropProgress (urn,guid) {
+    $.ajax ({
+        url: '/ForgeRoute/startGuidPro/' + urn + '/' + guid,
+        type: 'get',
+        data: null,
+        contentType: 'application/json',
+        complete: null
+    }).done (function (response) {
+        if ( response.body.data) {
+                prepareTree(response.body);
+
+        } else {
+            setTimeout (function () { getPropProgress (urn,guid) ; }, 500) ;
+        }
+    }).fail (function (xhr, ajaxOptions, thrownError) {
+        $('#msg').text ('get metadata request failed!') ;
+    }) ;
+}
+
+function prepareTree(jsonStr) {
+    $("#jstree_demo_div").html(""); 
+    document.getElementById("jstree_demo_div").innerHTML = JSONTree.create(jsonStr); 
+
+}
+  
+
+ 
+

@@ -1,98 +1,116 @@
+/////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) Autodesk, Inc. All rights reserved
+// Written by Philippe Leefsma 2014 - ADN/Developer Technical Services
+//
+// Permission to use, copy, modify, and distribute this software in
+// object code form for any purpose and without fee is hereby granted,
+// provided that the above copyright notice appears in all copies and
+// that both that copyright notice and the limited warranty and
+// restricted rights notice below appear in all supporting
+// documentation.
+//
+// AUTODESK PROVIDES THIS PROGRAM "AS IS" AND WITH ALL FAULTS.
+// AUTODESK SPECIFICALLY DISCLAIMS ANY IMPLIED WARRANTY OF
+// MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE.  AUTODESK, INC.
+// DOES NOT WARRANT THAT THE OPERATION OF THE PROGRAM WILL BE
+// UNINTERRUPTED OR ERROR FREE.
+/////////////////////////////////////////////////////////////////////////////////
+//var defaultUrn = 'urn:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6eGlhb2Rvbmd0ZXN0YnVja2V0L0Zyb250TG9hZGVyLm53ZA==';
+var defaultUrn = 'urn:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6eGlhb2Rvbmd0ZXN0YnVja2V0L1NoYW5naGFpVW5pdi1UdW5uZWwucnZ0';
 
-var currenturn = '';
-$(document).ready (function () {
+var _viewer;
+$(document).ready(function () {
+    var tokenurl = 'http://' + window.location.host + '/ForgeRoute/gettoken';
+    var config = {
+        environment : 'AutodeskProduction'
+		//environment : 'AutodeskStaging'
+    };
 
-    $('#btnTranslateThisOne').click (function (evt) {
-        var files =document.getElementById ('files').files ;
-        if ( files.length == 0 )
-            return ;
+    // Instantiate viewer factory
+    var viewerFactory = new Autodesk.ADN.Toolkit.Viewer.AdnViewerFactory(
+        tokenurl,
+        config);
 
-        $.each (files, function (key, value) {
-            var data =new FormData () ;
-            data.append (key, value) ;
+    // Allows different urn to be passed as url parameter
+    var paramUrn = Autodesk.Viewing.Private.getParameterByName('urn');
+    var urn = (paramUrn !== '' ? paramUrn : defaultUrn);
 
-            $.ajax ({
-                url: 'http://' + window.location.host + '/ForgeRoute/file',
-                type: 'post',
-                headers: { 'x-file-name': value.name },
-                data: data,
-                cache: false,
-                //dataType: 'json',
-                processData: false, // Don't process the files
-                contentType: false, // Set content type to false as jQuery will tell the server its a query string request
-                complete: null
-            }).done (function (data) {
-                $('#msg').text (value.name + ' file uploaded on your server') ;
-                var paramToTrans  = {name:data.name,
-                    iszip: $('#iszip').prop('checked'),
-                    rootfile: $('#rootfile').prop('value'),
-                    key:$('#key').prop('value'),
-                    secret:$('#secret').prop('value')};
-                translate (paramToTrans) ;
-            }).fail (function (xhr, ajaxOptions, thrownError) {
-                $('#msg').text (value.name + ' upload failed!') ;
-            }) ;
-        }) ;
+    viewerFactory.getViewablePath (urn,
+        function(pathInfoCollection) {
+            var viewerConfig = {
+                viewerType: 'GuiViewer3D'
+            };
 
-    }) ;
+            var viewer = viewerFactory.createViewer(
+                $('#viewerDiv')[0],
+                viewerConfig);
 
-    $('#btnAddThisOne').click (function (evt) {
-        var urn =$('#urn').val ().trim () ;
-        if ( urn == '' )
-            return ;
-        AddThisOne (urn) ;
-    }) ;
+            viewer.load(pathInfoCollection.path3d[0].path);
 
-}) ;
+            _viewer = viewer;
+        },
+        onError);
 
-function AddThisOne (urn) {
-    var id =urn.replace (/=+/g, '') ;
-    $('#list').append ('<div class="list-group-item row">'
-        + '<button id="' + id + '" type="text" class="form-control">' + urn + '</button>'
-        + '</div>'
-    ) ;
+});
 
-    $('#' + id).click (function (evt) {
-        window.open ('/?urn=' + $(this).text (), '_blank') ;
-    }) ;
-}
+function onError(error) {
+    console.log('Error: ' + error);
+};
 
-function translate (data) {
-    $('#msg').text (data.name + ' translation request...') ;
-    $.ajax ({
-        url: '/ForgeRoute/translate',
-        type: 'post',
-        data: JSON.stringify (data),
-        timeout: 0,
-        contentType: 'application/json',
-        complete: null
-    }).done (function (response) {
-        $('#msg').text (data.name + ' translation requested...') ;
-        setTimeout (function () { translateProgress (response.urn) ; }, 5000) ;
-        thisurn = response.urn;
-    }).fail (function (xhr, ajaxOptions, thrownError) {
-        $('#msg').text (data.name + ' translation request failed!') ;
-    }) ;
-}
+// The following code does not rely on Autodesk.ADN.Toolkit.Viewer.AdnViewerManager
+// and uses the Autodesk API directly.
+//
+//        $(document).ready(function () {
+//            var getToken =  function() {
+//                var xhr = new XMLHttpRequest();
+//                xhr.open("GET", 'http://' + window.location.host + '/api/token', false);
+//                xhr.send(null);
+//                return xhr.responseText;
+//            }
 
-function translateProgress (urn) {
-    $.ajax ({
-        url: '/ForgeRoute/translate/' + urn + '/progress',
-        type: 'get',
-        data: null,
-        contentType: 'application/json',
-        complete: null
-    }).done (function (response) {
-        if ( response.progress == 'complete' ) {
-            AddThisOne (response.urn) ;
-            $('#msg').text ('') ;
-        } else {
-            var name =window.atob (urn) ;
-            var filename =name.replace (/^.*[\\\/]/, '') ;
-            $('#msg').text (filename + ': ' + response.progress) ;
-            setTimeout (function () { translateProgress (urn) ; }, 500) ;
-        }
-    }).fail (function (xhr, ajaxOptions, thrownError) {
-        $('#msg').text ('Progress request failed!') ;
-    }) ;
-}
+//              // Allows different urn to be passed as url parameter
+//              var paramUrn = Autodesk.Viewing.Private.getParameterByName('urn');
+//              var urn = (paramUrn !== '' ? paramUrn : defaultUrn);
+//    
+//
+//              if (urn.indexOf('urn:') !== 0)
+//                  urn = 'urn:' + urn;
+                  
+//            function initializeViewer(containerId, documentId, role) {
+//                var viewerContainer = document.getElementById(containerId);
+//                var viewer = new Autodesk.Viewing.Private.GuiViewer3D(
+//                        viewerContainer);
+//                viewer.start();
+//
+//                Autodesk.Viewing.Document.load(documentId,
+//                        function (document) {
+//                            var rootItem = document.getRootItem();
+//                            var geometryItems = Autodesk.Viewing.Document.getSubItemsWithProperties(
+//                                    rootItem,
+//                                    { 'type': 'geometry', 'role': role },
+//                                    true);
+//
+//                            viewer.load(document.getViewablePath(geometryItems[0]));
+//                        },
+//
+//                        // onErrorCallback
+//                        function (msg) {
+//                            console.log("Error loading document: " + msg);
+//                        }
+//                );
+//            }
+//
+//            function initialize() {
+//                var options = {
+//                    env: "AutodeskProduction",
+//                    getAccessToken: getToken,
+//                    refreshToken: getToken
+//                };
+//
+//                Autodesk.Viewing.Initializer(options, function () {
+//                    initializeViewer('viewerDiv', urn, '3d');
+//                });
+//            }
+//
+//            initialize();
+//        });
