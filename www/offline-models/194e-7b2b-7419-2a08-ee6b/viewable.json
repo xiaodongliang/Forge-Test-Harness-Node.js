@@ -1,0 +1,103 @@
+{
+  "guid": "dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6YWRudGVzdGJ1Y2tldC9Gcm9udExvYWRlci5ud2Q",
+  "success": "100%",
+  "hasThumbnail": "true",
+  "urn": "dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6YWRudGVzdGJ1Y2tldC9Gcm9udExvYWRlci5ud2Q",
+  "status": "success",
+  "startedAt": "Sun Sep 18 06:55:04 UTC 2016",
+  "region": "US",
+  "owner": "dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6YWRudGVzdGJ1Y2tldC9Gcm9udExvYWRlci5ud2Q=",
+  "type": "design",
+  "progress": "complete",
+  "children": [
+    {
+      "guid": "aa85aad6-c480-4a35-9cbf-4cf5994a25ba",
+      "name": "FrontLoader.nwd",
+      "success": "100%",
+      "hasThumbnail": "true",
+      "role": "viewable",
+      "fileType": "nwd",
+      "version": "2.0",
+      "outputFileType": "svf",
+      "urn": "dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6YWRudGVzdGJ1Y2tldC9Gcm9udExvYWRlci5ud2Q",
+      "status": "success",
+      "assetCount": 7,
+      "inputFileCount": 1,
+      "type": "folder",
+      "inputFileSize": 13699721,
+      "inputFileType": "nwd",
+      "progress": "complete",
+      "children": [
+        {
+          "guid": "1ab7cda6-93b3-4451-a317-b53bc252c9ca",
+          "name": "Sheets",
+          "success": "100%",
+          "hasThumbnail": "true",
+          "status": "success",
+          "type": "folder",
+          "progress": "complete",
+          "children": [
+            {
+              "guid": "cbc1ba06-a4d9-4f12-aac5-65b5cf945af0",
+              "name": "Front Loader.iam",
+              "success": "100%",
+              "size": 0,
+              "hasThumbnail": "true",
+              "role": "3d",
+              "viewableID": "Front Loader.iam",
+              "useAsDefault": true,
+              "order": 0,
+              "status": "success",
+              "type": "geometry",
+              "progress": "complete",
+              "children": [
+                {
+                  "guid": "5e0bf250-f1fa-45ea-9ec3-7ce304923c1a",
+                  "name": "Default",
+                  "role": "3d",
+                  "camera": [
+                    428.439728,
+                    442.715424,
+                    140.903183,
+                    3.81915,
+                    49.307198,
+                    74.013344,
+                    -0.666915,
+                    0.73769,
+                    -0.105058,
+                    2.351351,
+                    0.880605,
+                    1,
+                    0
+                  ],
+                  "useAsDefault": true,
+                  "status": "success",
+                  "type": "view",
+                  "hasThumbnail": "true",
+                  "children": []
+                },
+                {
+                  "guid": "a6147220-329a-4a04-b822-4fbbd112c061",
+                  "type": "resource",
+                  "urn": "urn:adsk.viewing:fs.file:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6YWRudGVzdGJ1Y2tldC9Gcm9udExvYWRlci5ud2Q/output/0/0.svf",
+                  "role": "graphics",
+                  "mime": "application/autodesk-svf",
+                  "size": 4495228
+                }
+              ]
+            },
+            {
+              "guid": "5a29d000-d426-4c84-a191-36bcd13d7bcd",
+              "type": "resource",
+              "urn": "urn:adsk.viewing:fs.file:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6YWRudGVzdGJ1Y2tldC9Gcm9udExvYWRlci5ud2Q/output/0/properties.db",
+              "role": "Autodesk.CloudPlatform.PropertyDatabase",
+              "mime": "application/autodesk-db",
+              "status": "success",
+              "size": 4370432
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

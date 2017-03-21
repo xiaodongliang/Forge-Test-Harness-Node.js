@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Forge Viewer 应用平台</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css"  />
+  
+    <link rel="stylesheet" href="offline-libs/style.css">
+    <link rel="stylesheet" href="css/mystyle.css">
+
+    <script src="js/jquery-2.1.2.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+ 
+     <script src="offline-libs/viewer3D.js"></script>
+
+    <script src="js/model-structure.js"></script>
+
+     <script src="js/main.js"></script>
+ 
+</head>
+
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6 col-md-3 sidebar">
+                <div class="panel panel-default">
+                    <div class="btn-group-vertical">
+
+                                <a class="btn btn-primary btn-sm" id="btnLoadSecond">load second model</a>
+ 
+                               <a class="btn btn-primary btn-sm" id="btnUnloadSecond">unload second model</a>
+
+                            <a class="btn btn-primary btn-sm" id="btnTransform">transform model after loading</a>
+
+                  </div>
+                
+                </div>
+
+            </div>
+
+              <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-3 main">
+                <h1 class="sub-header text-center "> 3D model</h1>
+                <div class="row placeholders">
+                    <div class="col-xs-6 col-sm-12 placeholder">
+                         <div id="viewer3D" name="3d"/>
+                    </div>
+                </div>
+                
+              </div>
+
+            </div>
+          </div>
+
+ </body>
+
+</html>

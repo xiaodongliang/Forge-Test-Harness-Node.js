@@ -1,0 +1,1853 @@
+{
+  "guid": "dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6eGlhb2Rvbmd0ZXN0YnVja2V0L3JhY19hZHZhbmNlZC5ydnQ",
+  "success": "100%",
+  "hasThumbnail": "true",
+  "progress": "complete",
+  "urn": "dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6eGlhb2Rvbmd0ZXN0YnVja2V0L3JhY19hZHZhbmNlZC5ydnQ",
+  "status": "success",
+  "startedAt": "Thu Feb 02 11:45:43 UTC 2017",
+  "region": "US",
+  "owner": "dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6eGlhb2Rvbmd0ZXN0YnVja2V0L3JhY19hZHZhbmNlZC5ydnQ=",
+  "type": "design",
+  "children": [
+    {
+      "guid": "aa85aad6-c480-4a35-9cbf-4cf5994a25ba",
+      "messages": [
+        {
+          "type": "warning",
+          "code": "Revit-MissingLink",
+          "message": [
+            "<message>Missing link files: <ul>{0}</ul></message>",
+            "Newspaper.jpg"
+          ]
+        }
+      ],
+      "name": "rac_advanced.rvt",
+      "success": "100%",
+      "hasThumbnail": "true",
+      "role": "viewable",
+      "version": "2.0",
+      "properties": {
+        "Document Information": {
+          "Project Name": "Project Name",
+          "Project Number": "Project Number",
+          "Author": "",
+          "Project Address": "Enter address here",
+          "Project Issue Date": "Issue Date",
+          "Project Status": "Project Status",
+          "Building Name": "",
+          "Client Name": "Owner",
+          "Organization Name": "",
+          "Organization Description": ""
+        }
+      },
+      "progress": "complete",
+      "urn": "dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6eGlhb2Rvbmd0ZXN0YnVja2V0L3JhY19hZHZhbmNlZC5ydnQ",
+      "status": "success",
+      "type": "folder",
+      "children": [
+        {
+          "guid": "8f55cfeb-b04c-4364-c9ab-4c88788f0966",
+          "role": "Autodesk.CloudPlatform.DesignDescription",
+          "mime": "application/json",
+          "urn": "urn:adsk.viewing:fs.file:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6eGlhb2Rvbmd0ZXN0YnVja2V0L3JhY19hZHZhbmNlZC5ydnQ/output/designDescription.json",
+          "status": "success",
+          "type": "resource"
+        },
+        {
+          "guid": "6fac95cb-af5d-3e4f-b943-8a7f55847ff1",
+          "size": 8482816,
+          "role": "Autodesk.CloudPlatform.PropertyDatabase",
+          "mime": "application/autodesk-db",
+          "urn": "urn:adsk.viewing:fs.file:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6eGlhb2Rvbmd0ZXN0YnVja2V0L3JhY19hZHZhbmNlZC5ydnQ/output/Resource/model.sdb",
+          "status": "success",
+          "type": "resource"
+        },
+        {
+          "guid": "b3d264ca-e819-9185-b1a4-9d4d0502c1e9",
+          "name": "Views",
+          "success": "100%",
+          "hasThumbnail": "true",
+          "progress": "complete",
+          "status": "success",
+          "type": "folder",
+          "children": [
+            {
+              "guid": "b92bfc63-c1a3-3235-49f4-69782d4aa0fe",
+              "name": "3D View",
+              "success": "100%",
+              "hasThumbnail": "true",
+              "progress": "complete",
+              "status": "success",
+              "type": "folder",
+              "children": [
+                {
+                  "guid": "a2245bdb-eb53-acce-9a2c-fb70d7d8eb93",
+                  "name": "Building Courtyard",
+                  "success": "100%",
+                  "size": 8640919,
+                  "hasThumbnail": "true",
+                  "role": "3d",
+                  "viewableID": "6949fe39-3e9a-4d4d-b7fe-71339c615138-00022334",
+                  "progress": "complete",
+                  "status": "success",
+                  "type": "geometry",
+                  "children": [
+                    {
+                      "guid": "6949fe39-3e9a-4d4d-b7fe-71339c615138-00022334",
+                      "name": "Building Courtyard",
+                      "role": "3d",
+                      "camera": [
+                        257.630493,
+                        132.587234,
+                        5.74147,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1,
+                        3.150477,
+                        1.236851,
+                        1,
+                        0
+                      ],
+                      "progress": "complete",
+                      "status": "success",
+                      "type": "view"
+                    },
+                    {
+                      "guid": "cfc3291a-198e-9131-1e7e-423f21d81aeb",
+                      "size": 8583664,
+                      "role": "graphics",
+                      "mime": "application/autodesk-svf",
+                      "urn": "urn:adsk.viewing:fs.file:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6eGlhb2Rvbmd0ZXN0YnVja2V0L3JhY19hZHZhbmNlZC5ydnQ/output/Resource/3D_View/Building_Courtyard 140084/Building_Courtyard.svf",
+                      "type": "resource"
+                    }
+                  ]
+                },
+                {
+                  "guid": "7a862492-adf8-636b-47e3-3c9e4874420a",
+                  "name": "{3D}",
+                  "success": "100%",
+                  "size": 14157931,
+                  "hasThumbnail": "true",
+                  "role": "3d",
+                  "viewableID": "9e597f98-694d-4ada-b8ef-0e7459e0b930-00029266",
+                  "progress": "complete",
+                  "status": "success",
+                  "type": "geometry",
+                  "children": [
+                    {
+                      "guid": "9e597f98-694d-4ada-b8ef-0e7459e0b930-00029266",
+                      "name": "{3D}",
+                      "role": "3d",
+                      "camera": [
+                        1144.763062,
+                        -936.500549,
+                        664.179382,
+                        141.907379,
+                        12.191406,
+                        16.274481,
+                        -0.308645,
+                        0.291975,
+                        0.905256,
+                        2.090853,
+                        0,
+                        1,
+                        1
+                      ],
+                      "progress": "complete",
+                      "status": "success",
+                      "type": "view"
+                    },
+                    {
+                      "guid": "57873878-6d98-b389-aa22-fead1053823f",
+                      "size": 14076122,
+                      "role": "graphics",
+                      "mime": "application/autodesk-svf",
+                      "urn": "urn:adsk.viewing:fs.file:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6eGlhb2Rvbmd0ZXN0YnVja2V0L3JhY19hZHZhbmNlZC5ydnQ/output/Resource/3D_View/_3D_ 168550/_3D_.svf",
+                      "type": "resource"
+                    }
+                  ]
+                },
+                {
+                  "guid": "cb670fc6-f3ed-33ff-99bb-a2aeeb846d5b",
+                  "name": "Balcony View",
+                  "success": "100%",
+                  "size": 8659340,
+                  "hasThumbnail": "true",
+                  "role": "3d",
+                  "viewableID": "2d18db1a-a29c-49c0-9218-7a26f89f546c-0002b379",
+                  "progress": "complete",
+                  "status": "success",
+                  "type": "geometry",
+                  "children": [
+                    {
+                      "guid": "2d18db1a-a29c-49c0-9218-7a26f89f546c-0002b379",
+                      "name": "Balcony View",
+                      "role": "3d",
+                      "camera": [
+                        13.781029,
+                        -24.276316,
+                        18.208662,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1,
+                        1.333333,
+                        0.876348,
+                        1,
+                        0
+                      ],
+                      "progress": "complete",
+                      "status": "success",
+                      "type": "view"
+                    },
+                    {
+                      "guid": "00b17af1-eca6-5a85-bbbb-cca4341eb7cb",
+                      "size": 8592844,
+                      "role": "graphics",
+                      "mime": "application/autodesk-svf",
+                      "urn": "urn:adsk.viewing:fs.file:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6eGlhb2Rvbmd0ZXN0YnVja2V0L3JhY19hZHZhbmNlZC5ydnQ/output/Resource/3D_View/Balcony_View 177017/Balcony_View.svf",
+                      "type": "resource"
+                    }
+                  ]
+                },
+                {
+                  "guid": "4d6a1047-c062-00f8-2fbd-4e709f124ac8",
+                  "name": "From Parking Area",
+                  "success": "100%",
+                  "size": 8701649,
+                  "hasThumbnail": "true",
+                  "role": "3d",
+                  "viewableID": "f912f4fb-2fd6-423a-8f6a-19f3c01fd1d7-00037e0a",
+                  "progress": "complete",
+                  "status": "success",
+                  "type": "geometry",
+                  "children": [
+                    {
+                      "guid": "f912f4fb-2fd6-423a-8f6a-19f3c01fd1d7-00037e0a",
+                      "name": "From Parking Area",
+                      "role": "3d",
+                      "camera": [
+                        -58.85606,
+                        -145.56572,
+                        5.74147,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1,
+                        2.830784,
+                        1.538513,
+                        1,
+                        0
+                      ],
+                      "progress": "complete",
+                      "status": "success",
+                      "type": "view"
+                    },
+                    {
+                      "guid": "85563b20-289c-b4d5-ffad-824ff62f312b",
+                      "size": 8614028,
+                      "role": "graphics",
+                      "mime": "application/autodesk-svf",
+                      "urn": "urn:adsk.viewing:fs.file:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6eGlhb2Rvbmd0ZXN0YnVja2V0L3JhY19hZHZhbmNlZC5ydnQ/output/Resource/3D_View/From_Parking_Area 228874/From_Parking_Area.svf",
+                      "type": "resource"
+                    }
+                  ]
+                },
+                {
+                  "guid": "34a21d7f-4a5a-34d2-ae0c-71c01f82a0e4",
+                  "name": "03 - Floor Public - Day Rendering",
+                  "success": "100%",
+                  "size": 6113963,
+                  "hasThumbnail": "true",
+                  "role": "3d",
+                  "viewableID": "5adb2457-c5f4-4c3d-bc82-abc28b7e3fb7-00038e79",
+                  "progress": "complete",
+                  "status": "success",
+                  "type": "geometry",
+                  "children": [
+                    {
+                      "guid": "5adb2457-c5f4-4c3d-bc82-abc28b7e3fb7-00038e79",
+                      "name": "03 - Floor Public - Day Rendering",
+                      "role": "3d",
+                      "camera": [
+                        18.643185,
+                        -45.910755,
+                        30.675854,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1,
+                        1.608331,
+                        1.068015,
+                        1,
+                        0
+                      ],
+                      "progress": "complete",
+                      "status": "success",
+                      "type": "view"
+                    },
+                    {
+                      "guid": "302b5f19-c147-ec40-51ab-6558952ff7ea",
+                      "size": 5954309,
+                      "role": "graphics",
+                      "mime": "application/autodesk-svf",
+                      "urn": "urn:adsk.viewing:fs.file:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6eGlhb2Rvbmd0ZXN0YnVja2V0L3JhY19hZHZhbmNlZC5ydnQ/output/Resource/3D_View/03___Floor_Public___Day_Rendering 233081/03___Floor_Public___Day_Rendering.svf",
+                      "type": "resource"
+                    }
+                  ]
+                },
+                {
+                  "guid": "84f003f5-8c05-f3aa-5e08-ddcdb00024a6",
+                  "name": "03 - Floor Public - Night Rendering",
+                  "success": "100%",
+                  "size": 6097926,
+                  "hasThumbnail": "true",
+                  "role": "3d",
+                  "viewableID": "2e9ef463-3346-4186-9c82-ecf92a4910c4-0003cf22",
+                  "progress": "complete",
+                  "status": "success",
+                  "type": "geometry",
+                  "children": [
+                    {
+                      "guid": "2e9ef463-3346-4186-9c82-ecf92a4910c4-0003cf22",
+                      "name": "03 - Floor Public - Night Rendering",
+                      "role": "3d",
+                      "camera": [
+                        18.643185,
+                        -45.910755,
+                        30.675854,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1,
+                        1.608331,
+                        1.068015,
+                        1,
+                        0
+                      ],
+                      "progress": "complete",
+                      "status": "success",
+                      "type": "view"
+                    },
+                    {
+                      "guid": "a10fd15a-4f91-056b-9347-15973a7537e0",
+                      "size": 5946301,
+                      "role": "graphics",
+                      "mime": "application/autodesk-svf",
+                      "urn": "urn:adsk.viewing:fs.file:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6eGlhb2Rvbmd0ZXN0YnVja2V0L3JhY19hZHZhbmNlZC5ydnQ/output/Resource/3D_View/03___Floor_Public___Night_Rendering 249634/03___Floor_Public___Night_Rendering.svf",
+                      "type": "resource"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "guid": "a2f98dc3-488d-e192-63cc-c8c03378455b",
+              "name": "Floor Plan",
+              "success": "100%",
+              "hasThumbnail": "true",
+              "progress": "complete",
+              "status": "success",
+              "type": "folder",
+              "children": [
+                {
+                  "guid": "c3f5348f-6947-4ddf-aa1e-749882f86acc-00000138",
+                  "name": "01 - Entry Level",
+                  "success": "100%",
+                  "intermediateFile": "output/Resource/Floor_Plan/01___Entry_Level 312/dwfx/01___Entry_Level.dwfx",
+                  "size": 125105,
+                  "hasThumbnail": "true",
+                  "levelName": "01 - Entry Level",
+                  "role": "2d",
+                  "viewableID": "c3f5348f-6947-4ddf-aa1e-749882f86acc-00000138",
+                  "placement": [
+                    1,
+                    0,
+                    0,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0,
+                    1,
+                    0,
+                    30.190287,
+                    74.262012,
+                    4.265092,
+                    1
+                  ],
+                  "properties": {
+                    "Print Setting": {
+                      "Layout": "Landscape",
+                      "Paper size": "ISO A4, 210 x 297 mm"
+                    }
+                  },
+                  "progress": "complete",
+                  "order": 0,
+                  "status": "success",
+                  "type": "geometry",
+                  "levelNumber": 1,
+                  "children": [
+                    {
+                      "guid": "a3677492-c150-4e38-6ccc-be59fe680c85",
+                      "size": 125105,
+                      "role": "graphics",
+                      "mime": "application/autodesk-f2d",
+                      "urn": "urn:adsk.viewing:fs.file:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6eGlhb2Rvbmd0ZXN0YnVja2V0L3JhY19hZHZhbmNlZC5ydnQ/output/ada9d408-cf01-0266-d598-10962e1552c7_f2d/primaryGraphics.f2d",
+                      "status": "success",
+                      "type": "resource"
+                    },
+                    {
+                      "guid": "7f8acc2d-f4a6-4eba-8ebe-e1ccf16b2804",
+                      "name": "Floor Plan: 01 - Entry Level",
+                      "role": "2d",
+                      "viewbox": [
+                        0,
+                        0,
+                        279.4,
+                        215.9
+                      ],
+                      "type": "view"
+                    }
+                  ]
+                },
+                {
+                  "guid": "c3f5348f-6947-4ddf-aa1e-749882f86acc-000002b7",
+                  "name": "02 - Floor",
+                  "success": "100%",
+                  "intermediateFile": "output/Resource/Floor_Plan/02___Floor 695/dwfx/02___Floor.dwfx",
+                  "size": 96920,
+                  "hasThumbnail": "true",
+                  "levelName": "02 - Floor",
+                  "role": "2d",
+                  "viewableID": "c3f5348f-6947-4ddf-aa1e-749882f86acc-000002b7",
+                  "placement": [
+                    1,
+                    0,
+                    0,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0,
+                    1,
+                    0,
+                    30.190287,
+                    74.262012,
+                    16.404199,
+                    1
+                  ],
+                  "properties": {
+                    "Print Setting": {
+                      "Layout": "Landscape",
+                      "Paper size": "ISO A4, 210 x 297 mm"
+                    }
+                  },
+                  "progress": "complete",
+                  "order": 0,
+                  "status": "success",
+                  "type": "geometry",
+                  "levelNumber": 2,
+                  "children": [
+                    {
+                      "guid": "a0603db2-df99-fa5d-f425-ef32f427d1a4",
+                      "size": 96920,
+                      "role": "graphics",
+                      "mime": "application/autodesk-f2d",
+                      "urn": "urn:adsk.viewing:fs.file:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6eGlhb2Rvbmd0ZXN0YnVja2V0L3JhY19hZHZhbmNlZC5ydnQ/output/f7ba749c-ce07-2b3c-d1ba-f45069a46564_f2d/primaryGraphics.f2d",
+                      "status": "success",
+                      "type": "resource"
+                    },
+                    {
+                      "guid": "ce95710b-335a-46b8-97bc-f683387c8c12",
+                      "name": "Floor Plan: 02 - Floor",
+                      "role": "2d",
+                      "viewbox": [
+                        0,
+                        0,
+                        279.4,
+                        215.9
+                      ],
+                      "type": "view"
+                    }
+                  ]
+                },
+                {
+                  "guid": "c3f5348f-6947-4ddf-aa1e-749882f86acc-0000203b",
+                  "name": "Site",
+                  "success": "100%",
+                  "intermediateFile": "output/Resource/Floor_Plan/Site 8251/dwfx/Site.dwfx",
+                  "size": 40986,
+                  "hasThumbnail": "true",
+                  "levelName": "01 - Entry Level",
+                  "role": "2d",
+                  "viewableID": "c3f5348f-6947-4ddf-aa1e-749882f86acc-0000203b",
+                  "placement": [
+                    1,
+                    0,
+                    0,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0,
+                    1,
+                    0,
+                    30.190287,
+                    74.262012,
+                    328.08399,
+                    1
+                  ],
+                  "properties": {
+                    "Print Setting": {
+                      "Layout": "Landscape",
+                      "Paper size": "ISO A4, 210 x 297 mm"
+                    }
+                  },
+                  "progress": "complete",
+                  "order": 0,
+                  "status": "success",
+                  "type": "geometry",
+                  "levelNumber": 1,
+                  "children": [
+                    {
+                      "guid": "19955f00-9b6f-132c-bfd4-2e8cecff2efd",
+                      "size": 40986,
+                      "role": "graphics",
+                      "mime": "application/autodesk-f2d",
+                      "urn": "urn:adsk.viewing:fs.file:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6eGlhb2Rvbmd0ZXN0YnVja2V0L3JhY19hZHZhbmNlZC5ydnQ/output/5134bfa6-74ca-30d0-b091-999f9174281b_f2d/primaryGraphics.f2d",
+                      "status": "success",
+                      "type": "resource"
+                    },
+                    {
+                      "guid": "bdce7688-b80a-43c0-bf71-0ae3c0420a6e",
+                      "name": "Floor Plan: Site",
+                      "role": "2d",
+                      "viewbox": [
+                        0,
+                        0,
+                        279.4,
+                        215.9
+                      ],
+                      "type": "view"
+                    }
+                  ]
+                },
+                {
+                  "guid": "e755b16e-7be3-4a21-978e-6b4aa426b0a4-00021497",
+                  "name": "03 - Floor",
+                  "success": "100%",
+                  "intermediateFile": "output/Resource/Floor_Plan/03___Floor 136343/dwfx/03___Floor.dwfx",
+                  "size": 93352,
+                  "hasThumbnail": "true",
+                  "levelName": "03 - Floor",
+                  "role": "2d",
+                  "viewableID": "e755b16e-7be3-4a21-978e-6b4aa426b0a4-00021497",
+                  "placement": [
+                    1,
+                    0,
+                    0,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0,
+                    1,
+                    0,
+                    30.190287,
+                    74.262012,
+                    28.871391,
+                    1
+                  ],
+                  "properties": {
+                    "Print Setting": {
+                      "Layout": "Landscape",
+                      "Paper size": "ISO A4, 210 x 297 mm"
+                    }
+                  },
+                  "progress": "complete",
+                  "order": 0,
+                  "status": "success",
+                  "type": "geometry",
+                  "levelNumber": 3,
+                  "children": [
+                    {
+                      "guid": "179e2ed6-8a72-d246-1c2e-30363e364d4a",
+                      "size": 93352,
+                      "role": "graphics",
+                      "mime": "application/autodesk-f2d",
+                      "urn": "urn:adsk.viewing:fs.file:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6eGlhb2Rvbmd0ZXN0YnVja2V0L3JhY19hZHZhbmNlZC5ydnQ/output/dd9fc2a8-5157-1104-6d4c-b1f5f91b49ea_f2d/primaryGraphics.f2d",
+                      "status": "success",
+                      "type": "resource"
+                    },
+                    {
+                      "guid": "216f9a85-ba88-4857-bbcb-ab14ab4d940a",
+                      "name": "Floor Plan: 03 - Floor",
+                      "role": "2d",
+                      "viewbox": [
+                        0,
+                        0,
+                        279.4,
+                        215.9
+                      ],
+                      "type": "view"
+                    }
+                  ]
+                },
+                {
+                  "guid": "e755b16e-7be3-4a21-978e-6b4aa426b0a4-00021643",
+                  "name": "Roof",
+                  "success": "100%",
+                  "intermediateFile": "output/Resource/Floor_Plan/Roof 136771/dwfx/Roof.dwfx",
+                  "size": 59287,
+                  "hasThumbnail": "true",
+                  "levelName": "Roof",
+                  "role": "2d",
+                  "viewableID": "e755b16e-7be3-4a21-978e-6b4aa426b0a4-00021643",
+                  "placement": [
+                    1,
+                    0,
+                    0,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0,
+                    1,
+                    0,
+                    30.190287,
+                    74.262012,
+                    43.963255,
+                    1
+                  ],
+                  "properties": {
+                    "Print Setting": {
+                      "Layout": "Landscape",
+                      "Paper size": "ISO A4, 210 x 297 mm"
+                    }
+                  },
+                  "progress": "complete",
+                  "order": 0,
+                  "status": "success",
+                  "type": "geometry",
+                  "levelNumber": 4,
+                  "children": [
+                    {
+                      "guid": "e0a80c80-c289-4347-b73f-672b4223659d",
+                      "name": "Floor Plan: Roof",
+                      "role": "2d",
+                      "viewbox": [
+                        0,
+                        0,
+                        279.4,
+                        215.9
+                      ],
+                      "type": "view"
+                    },
+                    {
+                      "guid": "a29b9dcf-c07d-a7bd-76ff-220dd4244d41",
+                      "size": 14110,
+                      "role": "graphics",
+                      "mime": "application/autodesk-f2d",
+                      "urn": "urn:adsk.viewing:fs.file:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6eGlhb2Rvbmd0ZXN0YnVja2V0L3JhY19hZHZhbmNlZC5ydnQ/output/ed9c28bf-6748-72b9-bf11-5452307514ac_f2d/primaryGraphics.f2d",
+                      "status": "success",
+                      "type": "resource"
+                    }
+                  ]
+                },
+                {
+                  "guid": "54357d13-d16a-405f-bcc0-f97695a789a5-00033ca8",
+                  "name": "01 - Entry Level - Furniture Layout",
+                  "success": "100%",
+                  "intermediateFile": "output/Resource/Floor_Plan/01___Entry_Level___Furniture_Layout 212136/dwfx/01___Entry_Level___Furniture_Layout.dwfx",
+                  "size": 78136,
+                  "hasThumbnail": "true",
+                  "levelName": "01 - Entry Level",
+                  "role": "2d",
+                  "viewableID": "54357d13-d16a-405f-bcc0-f97695a789a5-00033ca8",
+                  "placement": [
+                    1,
+                    0,
+                    0,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0,
+                    1,
+                    0,
+                    30.190287,
+                    74.262012,
+                    4.265092,
+                    1
+                  ],
+                  "properties": {
+                    "Print Setting": {
+                      "Layout": "Landscape",
+                      "Paper size": "ISO A4, 210 x 297 mm"
+                    }
+                  },
+                  "progress": "complete",
+                  "order": 0,
+                  "status": "success",
+                  "type": "geometry",
+                  "levelNumber": 1,
+                  "children": [
+                    {
+                      "guid": "1a974e9a-44b2-b5a9-0e59-f2dc30c93018",
+                      "size": 78136,
+                      "role": "graphics",
+                      "mime": "application/autodesk-f2d",
+                      "urn": "urn:adsk.viewing:fs.file:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6eGlhb2Rvbmd0ZXN0YnVja2V0L3JhY19hZHZhbmNlZC5ydnQ/output/d0814fc1-be52-e1d1-9ac3-76b8dc00dc5a_f2d/primaryGraphics.f2d",
+                      "status": "success",
+                      "type": "resource"
+                    },
+                    {
+                      "guid": "3e977d7e-b35d-4b0f-8274-8b1143000b63",
+                      "name": "Floor Plan: 01 - Entry Level - Furniture Layout",
+                      "role": "2d",
+                      "viewbox": [
+                        0,
+                        0,
+                        279.4,
+                        215.9
+                      ],
+                      "type": "view"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "guid": "c8d94021-ee4c-a3c0-2695-dcbf54d0da4d",
+              "name": "Ceiling Plan",
+              "success": "100%",
+              "hasThumbnail": "true",
+              "progress": "complete",
+              "status": "success",
+              "type": "folder",
+              "children": [
+                {
+                  "guid": "c3f5348f-6947-4ddf-aa1e-749882f86acc-0000013c",
+                  "name": "01 - Entry Level",
+                  "success": "100%",
+                  "intermediateFile": "output/Resource/Ceiling_Plan/01___Entry_Level 316/dwfx/01___Entry_Level.dwfx",
+                  "size": 43807,
+                  "hasThumbnail": "true",
+                  "levelName": "01 - Entry Level",
+                  "role": "2d",
+                  "viewableID": "c3f5348f-6947-4ddf-aa1e-749882f86acc-0000013c",
+                  "placement": [
+                    1,
+                    0,
+                    0,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0,
+                    1,
+                    0,
+                    30.190287,
+                    74.262012,
+                    7.545932,
+                    1
+                  ],
+                  "properties": {
+                    "Print Setting": {
+                      "Layout": "Landscape",
+                      "Paper size": "ISO A4, 210 x 297 mm"
+                    }
+                  },
+                  "progress": "complete",
+                  "order": 0,
+                  "status": "success",
+                  "type": "geometry",
+                  "levelNumber": 1,
+                  "children": [
+                    {
+                      "guid": "4bc5dc11-da2c-f8f0-edfb-ba436100efa3",
+                      "size": 43807,
+                      "role": "graphics",
+                      "mime": "application/autodesk-f2d",
+                      "urn": "urn:adsk.viewing:fs.file:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6eGlhb2Rvbmd0ZXN0YnVja2V0L3JhY19hZHZhbmNlZC5ydnQ/output/c010dac6-870d-02d5-20d7-4e27bfc807e1_f2d/primaryGraphics.f2d",
+                      "status": "success",
+                      "type": "resource"
+                    },
+                    {
+                      "guid": "b2115c44-0993-4b1e-8506-67ee73316f3e",
+                      "name": "Reflected Ceiling Plan: 01 - Entry Level",
+                      "role": "2d",
+                      "viewbox": [
+                        0,
+                        0,
+                        279.4,
+                        215.9
+                      ],
+                      "type": "view"
+                    }
+                  ]
+                },
+                {
+                  "guid": "c3f5348f-6947-4ddf-aa1e-749882f86acc-000002bb",
+                  "name": "02 - Floor",
+                  "success": "100%",
+                  "intermediateFile": "output/Resource/Ceiling_Plan/02___Floor 699/dwfx/02___Floor.dwfx",
+                  "size": 28284,
+                  "hasThumbnail": "true",
+                  "levelName": "02 - Floor",
+                  "role": "2d",
+                  "viewableID": "c3f5348f-6947-4ddf-aa1e-749882f86acc-000002bb",
+                  "placement": [
+                    1,
+                    0,
+                    0,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0,
+                    1,
+                    0,
+                    30.190287,
+                    74.262012,
+                    20.013123,
+                    1
+                  ],
+                  "properties": {
+                    "Print Setting": {
+                      "Layout": "Landscape",
+                      "Paper size": "ISO A4, 210 x 297 mm"
+                    }
+                  },
+                  "progress": "complete",
+                  "order": 0,
+                  "status": "success",
+                  "type": "geometry",
+                  "levelNumber": 2,
+                  "children": [
+                    {
+                      "guid": "24db6908-d474-6c06-a961-c15c2eb69789",
+                      "size": 28284,
+                      "role": "graphics",
+                      "mime": "application/autodesk-f2d",
+                      "urn": "urn:adsk.viewing:fs.file:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6eGlhb2Rvbmd0ZXN0YnVja2V0L3JhY19hZHZhbmNlZC5ydnQ/output/692cb428-d2ce-0342-e47a-c303a85dc75a_f2d/primaryGraphics.f2d",
+                      "status": "success",
+                      "type": "resource"
+                    },
+                    {
+                      "guid": "8955c403-a254-434e-80e6-6e3945a923be",
+                      "name": "Reflected Ceiling Plan: 02 - Floor",
+                      "role": "2d",
+                      "viewbox": [
+                        0,
+                        0,
+                        279.4,
+                        215.9
+                      ],
+                      "type": "view"
+                    }
+                  ]
+                },
+                {
+                  "guid": "e755b16e-7be3-4a21-978e-6b4aa426b0a4-0002149f",
+                  "name": "03 - Floor",
+                  "success": "100%",
+                  "intermediateFile": "output/Resource/Ceiling_Plan/03___Floor 136351/dwfx/03___Floor.dwfx",
+                  "size": 28913,
+                  "hasThumbnail": "true",
+                  "levelName": "03 - Floor",
+                  "role": "2d",
+                  "viewableID": "e755b16e-7be3-4a21-978e-6b4aa426b0a4-0002149f",
+                  "placement": [
+                    1,
+                    0,
+                    0,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0,
+                    1,
+                    0,
+                    30.190287,
+                    74.262012,
+                    32.480315,
+                    1
+                  ],
+                  "properties": {
+                    "Print Setting": {
+                      "Layout": "Landscape",
+                      "Paper size": "ISO A4, 210 x 297 mm"
+                    }
+                  },
+                  "progress": "complete",
+                  "order": 0,
+                  "status": "success",
+                  "type": "geometry",
+                  "levelNumber": 3,
+                  "children": [
+                    {
+                      "guid": "8ce11d22-9974-3881-4077-d3d6b4525dd7",
+                      "size": 28913,
+                      "role": "graphics",
+                      "mime": "application/autodesk-f2d",
+                      "urn": "urn:adsk.viewing:fs.file:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6eGlhb2Rvbmd0ZXN0YnVja2V0L3JhY19hZHZhbmNlZC5ydnQ/output/884eaa9d-5aa2-d128-4c69-39ea6befd87c_f2d/primaryGraphics.f2d",
+                      "status": "success",
+                      "type": "resource"
+                    },
+                    {
+                      "guid": "ffe1be28-70fb-4133-9d4a-3578fc97708b",
+                      "name": "Reflected Ceiling Plan: 03 - Floor",
+                      "role": "2d",
+                      "viewbox": [
+                        0,
+                        0,
+                        279.4,
+                        215.9
+                      ],
+                      "type": "view"
+                    }
+                  ]
+                },
+                {
+                  "guid": "e755b16e-7be3-4a21-978e-6b4aa426b0a4-0002164b",
+                  "name": "Roof",
+                  "success": "100%",
+                  "intermediateFile": "output/Resource/Ceiling_Plan/Roof 136779/dwfx/Roof.dwfx",
+                  "size": 11788,
+                  "hasThumbnail": "true",
+                  "levelName": "Roof",
+                  "role": "2d",
+                  "viewableID": "e755b16e-7be3-4a21-978e-6b4aa426b0a4-0002164b",
+                  "placement": [
+                    1,
+                    0,
+                    0,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0,
+                    1,
+                    0,
+                    30.190287,
+                    74.262012,
+                    44.947507,
+                    1
+                  ],
+                  "properties": {
+                    "Print Setting": {
+                      "Layout": "Landscape",
+                      "Paper size": "ISO A4, 210 x 297 mm"
+                    }
+                  },
+                  "progress": "complete",
+                  "order": 0,
+                  "status": "success",
+                  "type": "geometry",
+                  "levelNumber": 4,
+                  "children": [
+                    {
+                      "guid": "9120aab3-7530-bc7b-297a-abf71937523c",
+                      "size": 11788,
+                      "role": "graphics",
+                      "mime": "application/autodesk-f2d",
+                      "urn": "urn:adsk.viewing:fs.file:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6eGlhb2Rvbmd0ZXN0YnVja2V0L3JhY19hZHZhbmNlZC5ydnQ/output/9772e07d-b3ca-10e7-da15-b7e2f0a0e4f8_f2d/primaryGraphics.f2d",
+                      "status": "success",
+                      "type": "resource"
+                    },
+                    {
+                      "guid": "f96f84c3-1642-4064-b301-017a3186f011",
+                      "name": "Reflected Ceiling Plan: Roof",
+                      "role": "2d",
+                      "viewbox": [
+                        0,
+                        0,
+                        279.4,
+                        215.9
+                      ],
+                      "type": "view"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "guid": "3e10e9b9-9d03-bd14-2418-8e90414147c6",
+              "name": "Building Elevation",
+              "success": "100%",
+              "hasThumbnail": "true",
+              "progress": "complete",
+              "status": "success",
+              "type": "folder",
+              "children": [
+                {
+                  "guid": "f9c62406-7c50-11d5-93b8-0000863f27ad-00001fdd",
+                  "name": "North",
+                  "success": "100%",
+                  "intermediateFile": "output/Resource/Building_Elevation/North 8157/dwfx/North.dwfx",
+                  "size": 28468,
+                  "hasThumbnail": "true",
+                  "role": "2d",
+                  "viewableID": "f9c62406-7c50-11d5-93b8-0000863f27ad-00001fdd",
+                  "placement": [
+                    -1,
+                    0,
+                    -6.473283e-15,
+                    0,
+                    -6.473283e-15,
+                    0,
+                    1,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    17.204263,
+                    -3.937008,
+                    -46.605286,
+                    1
+                  ],
+                  "properties": {
+                    "Print Setting": {
+                      "Layout": "Landscape",
+                      "Paper size": "ISO A4, 210 x 297 mm"
+                    }
+                  },
+                  "progress": "complete",
+                  "order": 0,
+                  "status": "success",
+                  "type": "geometry",
+                  "children": [
+                    {
+                      "guid": "7118bd85-709e-30e3-9c62-bc9d165f2655",
+                      "size": 28468,
+                      "role": "graphics",
+                      "mime": "application/autodesk-f2d",
+                      "urn": "urn:adsk.viewing:fs.file:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6eGlhb2Rvbmd0ZXN0YnVja2V0L3JhY19hZHZhbmNlZC5ydnQ/output/5b8353d2-3356-65d0-a1af-7e8ae56c8e90_f2d/primaryGraphics.f2d",
+                      "status": "success",
+                      "type": "resource"
+                    },
+                    {
+                      "guid": "07fbcb70-6b1b-4b49-a0dd-6b34da786571",
+                      "name": "Elevation: North",
+                      "role": "2d",
+                      "viewbox": [
+                        0,
+                        0,
+                        279.4,
+                        215.9
+                      ],
+                      "type": "view"
+                    }
+                  ]
+                },
+                {
+                  "guid": "f9c62406-7c50-11d5-93b8-0000863f27ad-00001ff0",
+                  "name": "East",
+                  "success": "100%",
+                  "intermediateFile": "output/Resource/Building_Elevation/East 8176/dwfx/East.dwfx",
+                  "size": 0,
+                  "hasThumbnail": "true",
+                  "role": "2d",
+                  "viewableID": "f9c62406-7c50-11d5-93b8-0000863f27ad-00001ff0",
+                  "placement": [
+                    0,
+                    0,
+                    1,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    62.053704,
+                    -3.937008,
+                    -166.170727,
+                    1
+                  ],
+                  "properties": {
+                    "Print Setting": {
+                      "Layout": "Landscape",
+                      "Paper size": "ISO A4, 210 x 297 mm"
+                    }
+                  },
+                  "progress": "complete",
+                  "order": 0,
+                  "status": "success",
+                  "type": "geometry",
+                  "children": [
+                    {
+                      "guid": "8dfc4366-9532-4625-9e8d-d39ba361fd9b",
+                      "name": "Elevation: East",
+                      "role": "2d",
+                      "viewbox": [
+                        0,
+                        0,
+                        279.4,
+                        215.9
+                      ],
+                      "type": "view"
+                    },
+                    {
+                      "guid": "e6a43949-3573-79e5-63ae-8be6a04f0052",
+                      "size": 26843,
+                      "role": "graphics",
+                      "mime": "application/autodesk-f2d",
+                      "urn": "urn:adsk.viewing:fs.file:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6eGlhb2Rvbmd0ZXN0YnVja2V0L3JhY19hZHZhbmNlZC5ydnQ/output/6a6c7d5b-a835-19e9-4d02-12b4c37d1745_f2d/primaryGraphics.f2d",
+                      "status": "success",
+                      "type": "resource"
+                    }
+                  ]
+                },
+                {
+                  "guid": "f9c62406-7c50-11d5-93b8-0000863f27ad-0000202d",
+                  "name": "West",
+                  "success": "100%",
+                  "intermediateFile": "output/Resource/Building_Elevation/West 8237/dwfx/West.dwfx",
+                  "size": 28819,
+                  "hasThumbnail": "true",
+                  "role": "2d",
+                  "viewableID": "f9c62406-7c50-11d5-93b8-0000863f27ad-0000202d",
+                  "placement": [
+                    4.116096e-16,
+                    0,
+                    -1,
+                    0,
+                    -1,
+                    0,
+                    -4.116096e-16,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    -65.541998,
+                    -3.937008,
+                    -91.736078,
+                    1
+                  ],
+                  "properties": {
+                    "Print Setting": {
+                      "Layout": "Landscape",
+                      "Paper size": "ISO A4, 210 x 297 mm"
+                    }
+                  },
+                  "progress": "complete",
+                  "order": 0,
+                  "status": "success",
+                  "type": "geometry",
+                  "children": [
+                    {
+                      "guid": "efe5a3dd-ed7f-63f5-73d1-90b44a28be42",
+                      "size": 28819,
+                      "role": "graphics",
+                      "mime": "application/autodesk-f2d",
+                      "urn": "urn:adsk.viewing:fs.file:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6eGlhb2Rvbmd0ZXN0YnVja2V0L3JhY19hZHZhbmNlZC5ydnQ/output/ff80212b-7436-f7d1-aa96-556fa4d85b41_f2d/primaryGraphics.f2d",
+                      "status": "success",
+                      "type": "resource"
+                    },
+                    {
+                      "guid": "bef0816b-3360-4e3a-acb5-d1eff3776c68",
+                      "name": "Elevation: West",
+                      "role": "2d",
+                      "viewbox": [
+                        0,
+                        0,
+                        279.4,
+                        215.9
+                      ],
+                      "type": "view"
+                    }
+                  ]
+                },
+                {
+                  "guid": "627ad902-4aae-46a6-beef-a49c31eda294-000182a8",
+                  "name": "South",
+                  "success": "100%",
+                  "intermediateFile": "output/Resource/Building_Elevation/South 98984/dwfx/South.dwfx",
+                  "size": 37641,
+                  "hasThumbnail": "true",
+                  "role": "2d",
+                  "viewableID": "627ad902-4aae-46a6-beef-a49c31eda294-000182a8",
+                  "placement": [
+                    1,
+                    0,
+                    1.499278e-15,
+                    0,
+                    1.499278e-15,
+                    0,
+                    -1,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    -53.212833,
+                    0,
+                    -174.924898,
+                    1
+                  ],
+                  "properties": {
+                    "Print Setting": {
+                      "Layout": "Landscape",
+                      "Paper size": "ISO A4, 210 x 297 mm"
+                    }
+                  },
+                  "progress": "complete",
+                  "order": 0,
+                  "status": "success",
+                  "type": "geometry",
+                  "children": [
+                    {
+                      "guid": "377c86ce-5be9-9123-c4c4-123cc784acc8",
+                      "size": 71568,
+                      "role": "graphics",
+                      "mime": "application/autodesk-f2d",
+                      "urn": "urn:adsk.viewing:fs.file:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6eGlhb2Rvbmd0ZXN0YnVja2V0L3JhY19hZHZhbmNlZC5ydnQ/output/d48aad49-df43-e8c7-df75-5741548705ba_f2d/primaryGraphics.f2d",
+                      "status": "success",
+                      "type": "resource"
+                    },
+                    {
+                      "guid": "42e62a98-561a-4bc6-a870-cc75bdd3c41f",
+                      "name": "Elevation: South",
+                      "role": "2d",
+                      "viewbox": [
+                        0,
+                        0,
+                        279.4,
+                        215.9
+                      ],
+                      "type": "view"
+                    }
+                  ]
+                },
+                {
+                  "guid": "de86ce8d-8c1b-4f1e-abf4-01bc42b9c1b7-00033e34",
+                  "name": "Courtyard Elevation - South Wing",
+                  "success": "100%",
+                  "intermediateFile": "output/Resource/Building_Elevation/Courtyard_Elevation___South_Wing 212532/dwfx/Courtyard_Elevation___South_Wing.dwfx",
+                  "size": 22063,
+                  "hasThumbnail": "true",
+                  "role": "2d",
+                  "viewableID": "de86ce8d-8c1b-4f1e-abf4-01bc42b9c1b7-00033e34",
+                  "placement": [
+                    -1,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    20.369295,
+                    0,
+                    104.766009,
+                    1
+                  ],
+                  "properties": {
+                    "Print Setting": {
+                      "Layout": "Landscape",
+                      "Paper size": "ISO A4, 210 x 297 mm"
+                    }
+                  },
+                  "progress": "complete",
+                  "order": 0,
+                  "status": "success",
+                  "type": "geometry",
+                  "children": [
+                    {
+                      "guid": "5201cb7f-7340-9ad0-1710-8ac26d8b840d",
+                      "size": 22063,
+                      "role": "graphics",
+                      "mime": "application/autodesk-f2d",
+                      "urn": "urn:adsk.viewing:fs.file:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6eGlhb2Rvbmd0ZXN0YnVja2V0L3JhY19hZHZhbmNlZC5ydnQ/output/31b4c3d4-f742-db34-98c7-9311a4ccd815_f2d/primaryGraphics.f2d",
+                      "status": "success",
+                      "type": "resource"
+                    },
+                    {
+                      "guid": "90f22cae-4c1b-482d-b732-515df3e58115",
+                      "name": "Elevation: Courtyard Elevation - South Wing",
+                      "role": "2d",
+                      "viewbox": [
+                        0,
+                        0,
+                        279.4,
+                        215.9
+                      ],
+                      "type": "view"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "guid": "8bc15e36-9743-a64c-2b93-30bb41bb0233",
+              "name": "Gross Building",
+              "success": "100%",
+              "hasThumbnail": "true",
+              "progress": "complete",
+              "status": "success",
+              "type": "folder",
+              "children": [
+                {
+                  "guid": "151992a4-21b3-4582-b4fb-7e329d20a450-0002b4be",
+                  "name": "01 - Entry Level",
+                  "success": "100%",
+                  "intermediateFile": "output/Resource/Gross_Building/01___Entry_Level 177342/dwfx/01___Entry_Level.dwfx",
+                  "size": 0,
+                  "hasThumbnail": "true",
+                  "levelName": "01 - Entry Level",
+                  "role": "2d",
+                  "viewableID": "151992a4-21b3-4582-b4fb-7e329d20a450-0002b4be",
+                  "placement": [
+                    1,
+                    0,
+                    0,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0,
+                    1,
+                    0,
+                    30.190287,
+                    74.262012,
+                    3.937008,
+                    1
+                  ],
+                  "properties": {
+                    "Print Setting": {
+                      "Layout": "Landscape",
+                      "Paper size": "ISO A4, 210 x 297 mm"
+                    }
+                  },
+                  "progress": "complete",
+                  "order": 0,
+                  "status": "success",
+                  "type": "geometry",
+                  "levelNumber": 1,
+                  "children": [
+                    {
+                      "guid": "6f1647f2-6806-adee-fbbe-afa748fe0790",
+                      "size": 87581,
+                      "role": "graphics",
+                      "mime": "application/autodesk-f2d",
+                      "urn": "urn:adsk.viewing:fs.file:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6eGlhb2Rvbmd0ZXN0YnVja2V0L3JhY19hZHZhbmNlZC5ydnQ/output/3f20a07e-0c73-68c9-975d-178bc8e0e4d2_f2d/primaryGraphics.f2d",
+                      "status": "success",
+                      "type": "resource"
+                    },
+                    {
+                      "guid": "dd8973ca-7ba2-4dde-b0bd-0567196946a4",
+                      "name": "Area Plan (Gross Building): 01 - Entry Level",
+                      "role": "2d",
+                      "viewbox": [
+                        0,
+                        0,
+                        279.4,
+                        215.9
+                      ],
+                      "type": "view"
+                    }
+                  ]
+                },
+                {
+                  "guid": "065f4608-95a8-401e-bf4f-78d4e422208e-0002b9c6",
+                  "name": "02 - Floor",
+                  "success": "100%",
+                  "intermediateFile": "output/Resource/Gross_Building/02___Floor 178630/dwfx/02___Floor.dwfx",
+                  "size": 81630,
+                  "hasThumbnail": "true",
+                  "levelName": "02 - Floor",
+                  "role": "2d",
+                  "viewableID": "065f4608-95a8-401e-bf4f-78d4e422208e-0002b9c6",
+                  "placement": [
+                    1,
+                    0,
+                    0,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0,
+                    1,
+                    0,
+                    30.190287,
+                    74.262012,
+                    16.404199,
+                    1
+                  ],
+                  "properties": {
+                    "Print Setting": {
+                      "Layout": "Landscape",
+                      "Paper size": "ISO A4, 210 x 297 mm"
+                    }
+                  },
+                  "progress": "complete",
+                  "order": 0,
+                  "status": "success",
+                  "type": "geometry",
+                  "levelNumber": 2,
+                  "children": [
+                    {
+                      "guid": "0a073b12-dbbd-9db0-902e-d8a6011eff7c",
+                      "size": 81630,
+                      "role": "graphics",
+                      "mime": "application/autodesk-f2d",
+                      "urn": "urn:adsk.viewing:fs.file:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6eGlhb2Rvbmd0ZXN0YnVja2V0L3JhY19hZHZhbmNlZC5ydnQ/output/5977f0a8-94ef-9a6a-ab92-e76ed5f42688_f2d/primaryGraphics.f2d",
+                      "status": "success",
+                      "type": "resource"
+                    },
+                    {
+                      "guid": "14517e58-bdf1-4f94-a251-4586a2892cea",
+                      "name": "Area Plan (Gross Building): 02 - Floor",
+                      "role": "2d",
+                      "viewbox": [
+                        0,
+                        0,
+                        279.4,
+                        215.9
+                      ],
+                      "type": "view"
+                    }
+                  ]
+                },
+                {
+                  "guid": "065f4608-95a8-401e-bf4f-78d4e422208e-0002bb7d",
+                  "name": "03 - Floor",
+                  "success": "100%",
+                  "intermediateFile": "output/Resource/Gross_Building/03___Floor 179069/dwfx/03___Floor.dwfx",
+                  "size": 84120,
+                  "hasThumbnail": "true",
+                  "levelName": "03 - Floor",
+                  "role": "2d",
+                  "viewableID": "065f4608-95a8-401e-bf4f-78d4e422208e-0002bb7d",
+                  "placement": [
+                    1,
+                    0,
+                    0,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0,
+                    1,
+                    0,
+                    30.190287,
+                    74.262012,
+                    28.871391,
+                    1
+                  ],
+                  "properties": {
+                    "Print Setting": {
+                      "Layout": "Landscape",
+                      "Paper size": "ISO A4, 210 x 297 mm"
+                    }
+                  },
+                  "progress": "complete",
+                  "order": 0,
+                  "status": "success",
+                  "type": "geometry",
+                  "levelNumber": 3,
+                  "children": [
+                    {
+                      "guid": "919674db-13c9-795f-325d-2d3580ded996",
+                      "size": 84120,
+                      "role": "graphics",
+                      "mime": "application/autodesk-f2d",
+                      "urn": "urn:adsk.viewing:fs.file:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6eGlhb2Rvbmd0ZXN0YnVja2V0L3JhY19hZHZhbmNlZC5ydnQ/output/062a528d-c8bf-0f37-bb3c-83dab90ae33c_f2d/primaryGraphics.f2d",
+                      "status": "success",
+                      "type": "resource"
+                    },
+                    {
+                      "guid": "2adb6ff5-84e9-4efd-b299-8c5308ce8605",
+                      "name": "Area Plan (Gross Building): 03 - Floor",
+                      "role": "2d",
+                      "viewbox": [
+                        0,
+                        0,
+                        279.4,
+                        215.9
+                      ],
+                      "type": "view"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "guid": "91627a1e-5d55-2977-beda-c803a4604c6d",
+              "name": "Building Section",
+              "success": "100%",
+              "hasThumbnail": "true",
+              "progress": "complete",
+              "status": "success",
+              "type": "folder",
+              "children": [
+                {
+                  "guid": "de86ce8d-8c1b-4f1e-abf4-01bc42b9c1b7-00033df1",
+                  "name": "Section Through Main Stair",
+                  "success": "100%",
+                  "intermediateFile": "output/Resource/Building_Section/Section_Through_Main_Stair 212465/dwfx/Section_Through_Main_Stair.dwfx",
+                  "size": 0,
+                  "hasThumbnail": "true",
+                  "role": "2d",
+                  "viewableID": "de86ce8d-8c1b-4f1e-abf4-01bc42b9c1b7-00033df1",
+                  "placement": [
+                    0,
+                    0,
+                    -1,
+                    0,
+                    -1,
+                    0,
+                    0,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    -61.187296,
+                    -20.613757,
+                    -21.324128,
+                    1
+                  ],
+                  "properties": {
+                    "Print Setting": {
+                      "Layout": "Landscape",
+                      "Paper size": "ISO A4, 210 x 297 mm"
+                    }
+                  },
+                  "progress": "complete",
+                  "order": 0,
+                  "status": "success",
+                  "type": "geometry",
+                  "children": [
+                    {
+                      "guid": "4a18e8db-84da-4c5d-afa9-07e20ed439b7",
+                      "name": "Section: Section Through Main Stair",
+                      "role": "2d",
+                      "viewbox": [
+                        0,
+                        0,
+                        279.4,
+                        215.9
+                      ],
+                      "type": "view"
+                    },
+                    {
+                      "guid": "1dbe326e-c713-b102-f580-d066cd198337",
+                      "size": 69532,
+                      "role": "graphics",
+                      "mime": "application/autodesk-f2d",
+                      "urn": "urn:adsk.viewing:fs.file:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6eGlhb2Rvbmd0ZXN0YnVja2V0L3JhY19hZHZhbmNlZC5ydnQ/output/8cb8befa-0ae0-adb3-d2fe-bfafd3e88de0_f2d/primaryGraphics.f2d",
+                      "status": "success",
+                      "type": "resource"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "guid": "351a87e2-ef3e-b98d-283e-9cfefdf799f5",
+              "name": "Wall Section",
+              "success": "100%",
+              "hasThumbnail": "true",
+              "progress": "complete",
+              "status": "success",
+              "type": "folder",
+              "children": [
+                {
+                  "guid": "b3ac8313-71ac-4cfd-afdb-6741a492bbdb-00033f1e",
+                  "name": "Typical Wall Section",
+                  "success": "100%",
+                  "intermediateFile": "output/Resource/Wall_Section/Typical_Wall_Section 212766/dwfx/Typical_Wall_Section.dwfx",
+                  "size": 18353,
+                  "hasThumbnail": "true",
+                  "role": "2d",
+                  "viewableID": "b3ac8313-71ac-4cfd-afdb-6741a492bbdb-00033f1e",
+                  "placement": [
+                    0,
+                    0,
+                    -1,
+                    0,
+                    -1,
+                    0,
+                    0,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    -61.187296,
+                    -20.613757,
+                    -21.324128,
+                    1
+                  ],
+                  "properties": {
+                    "Print Setting": {
+                      "Layout": "Landscape",
+                      "Paper size": "ISO A4, 210 x 297 mm"
+                    }
+                  },
+                  "progress": "complete",
+                  "order": 0,
+                  "status": "success",
+                  "type": "geometry",
+                  "children": [
+                    {
+                      "guid": "e9585831-6296-8322-2299-b8c8de281bd4",
+                      "size": 18353,
+                      "role": "graphics",
+                      "mime": "application/autodesk-f2d",
+                      "urn": "urn:adsk.viewing:fs.file:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6eGlhb2Rvbmd0ZXN0YnVja2V0L3JhY19hZHZhbmNlZC5ydnQ/output/0b231c76-2745-d19b-6c87-b8b0c49dd23f_f2d/primaryGraphics.f2d",
+                      "status": "success",
+                      "type": "resource"
+                    },
+                    {
+                      "guid": "5a15996e-00bf-46a8-8e07-0c2e033d971d",
+                      "name": "Section: Typical Wall Section",
+                      "role": "2d",
+                      "viewbox": [
+                        0,
+                        0,
+                        279.4,
+                        215.9
+                      ],
+                      "type": "view"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "guid": "9e0c1dc0-fe0e-8e1e-9a22-9ff559253d5e",
+          "name": "Sheets",
+          "success": "100%",
+          "hasThumbnail": "true",
+          "progress": "complete",
+          "status": "success",
+          "type": "folder",
+          "children": [
+            {
+              "guid": "951810cc-7a73-4765-9179-f5744ba5d821-0003406e",
+              "name": "A1 - Floor Plan",
+              "success": "100%",
+              "intermediateFile": "output/Resource/Sheet/A1___Floor_Plan 213102/dwfx/A1___Floor_Plan.dwfx",
+              "size": 0,
+              "hasThumbnail": "true",
+              "levelName": "01 - Entry Level",
+              "role": "2d",
+              "viewableID": "951810cc-7a73-4765-9179-f5744ba5d821-0003406e",
+              "placement": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                30.190287,
+                74.262012,
+                0,
+                1
+              ],
+              "properties": {
+                "Print Setting": {
+                  "Layout": "Landscape",
+                  "Paper size": "ISO A4, 210 x 297 mm"
+                }
+              },
+              "progress": "complete",
+              "order": 0,
+              "status": "success",
+              "type": "geometry",
+              "levelNumber": 1,
+              "children": [
+                {
+                  "guid": "492e3af7-c35f-05d6-3025-caf87cbf6930",
+                  "size": 226461,
+                  "role": "graphics",
+                  "mime": "application/autodesk-f2d",
+                  "urn": "urn:adsk.viewing:fs.file:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6eGlhb2Rvbmd0ZXN0YnVja2V0L3JhY19hZHZhbmNlZC5ydnQ/output/67ea57c3-abfd-ab14-a5f3-4773962e3655_f2d/primaryGraphics.f2d",
+                  "status": "success",
+                  "type": "resource"
+                },
+                {
+                  "guid": "0e751f6f-0538-4331-9c39-ffc20944124c",
+                  "name": "Sheet: A1 - Floor Plan",
+                  "role": "2d",
+                  "viewbox": [
+                    0,
+                    -0.003849,
+                    1188,
+                    840.003849
+                  ],
+                  "type": "view"
+                }
+              ]
+            },
+            {
+              "guid": "951810cc-7a73-4765-9179-f5744ba5d821-0003407c",
+              "name": "A2 - Sections",
+              "success": "100%",
+              "intermediateFile": "output/Resource/Sheet/A2___Sections 213116/dwfx/A2___Sections.dwfx",
+              "size": 0,
+              "hasThumbnail": "true",
+              "role": "2d",
+              "viewableID": "951810cc-7a73-4765-9179-f5744ba5d821-0003407c",
+              "properties": {
+                "Print Setting": {
+                  "Layout": "Landscape",
+                  "Paper size": "ISO A4, 210 x 297 mm"
+                }
+              },
+              "progress": "complete",
+              "order": 0,
+              "status": "success",
+              "type": "geometry",
+              "children": [
+                {
+                  "guid": "00de068b-aa79-429f-8719-80b1dfd617e2",
+                  "name": "Sheet: A2 - Sections",
+                  "role": "2d",
+                  "viewbox": [
+                    0,
+                    -0.003849,
+                    1188,
+                    840.003849
+                  ],
+                  "type": "view"
+                },
+                {
+                  "guid": "97e93884-0b99-9f06-c8ee-26c526377925",
+                  "size": 305535,
+                  "role": "graphics",
+                  "mime": "application/autodesk-f2d",
+                  "urn": "urn:adsk.viewing:fs.file:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6eGlhb2Rvbmd0ZXN0YnVja2V0L3JhY19hZHZhbmNlZC5ydnQ/output/046a5f5b-7076-c129-2efa-2e40fafae7bf_f2d/primaryGraphics.f2d",
+                  "status": "success",
+                  "type": "resource"
+                }
+              ]
+            },
+            {
+              "guid": "bb69370f-1739-48a4-ad99-e72aadd4b58f-00054684",
+              "name": "A4 - Unnamed",
+              "success": "100%",
+              "intermediateFile": "output/Resource/Sheet/A4___Unnamed 345732/dwfx/A4___Unnamed.dwfx",
+              "size": 197585,
+              "hasThumbnail": "true",
+              "levelName": "02 - Floor",
+              "role": "2d",
+              "viewableID": "bb69370f-1739-48a4-ad99-e72aadd4b58f-00054684",
+              "placement": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                30.190287,
+                74.262012,
+                0,
+                1
+              ],
+              "properties": {
+                "Print Setting": {
+                  "Layout": "Landscape",
+                  "Paper size": "ISO A4, 210 x 297 mm"
+                }
+              },
+              "progress": "complete",
+              "order": 0,
+              "status": "success",
+              "type": "geometry",
+              "levelNumber": 2,
+              "children": [
+                {
+                  "guid": "f7d9ffe2-a289-5f4d-d6fe-6f3f7f7a57e0",
+                  "size": 197585,
+                  "role": "graphics",
+                  "mime": "application/autodesk-f2d",
+                  "urn": "urn:adsk.viewing:fs.file:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6eGlhb2Rvbmd0ZXN0YnVja2V0L3JhY19hZHZhbmNlZC5ydnQ/output/8b21325d-32b0-510a-3dd9-bf3c61f3b621_f2d/primaryGraphics.f2d",
+                  "status": "success",
+                  "type": "resource"
+                },
+                {
+                  "guid": "099e50d8-04fa-402d-b55f-bee0398d211f",
+                  "name": "Sheet: A4 - Unnamed",
+                  "role": "2d",
+                  "viewbox": [
+                    0,
+                    0.023889,
+                    840,
+                    593.976111
+                  ],
+                  "type": "view"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

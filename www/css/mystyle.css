@@ -1,0 +1,20 @@
+#viewer3D{
+    height:500px;
+    width:500px;
+}
+#viewer2D{
+    height:500px;
+}
+.shortwidth{
+    width:80px;
+}
+.mythumbnail{
+    width:200px;
+    height:200px;
+}
+.myradio2d{
+    /*nothing, just for siblings*/
+}
+.myradio3d{
+    /*nothing, just for siblings*/
+}
