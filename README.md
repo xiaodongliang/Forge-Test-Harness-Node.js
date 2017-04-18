@@ -30,6 +30,8 @@ This sample demos the scenarios to aggregate 3D models and 2D drawings.
   var model2_urn = '<replace with your encoded urn>';  // this is 3D model only
 
   ```
+* install npm modules
+
 * Run the server from the Node.js console, by running the following command: <br />
   ```
   node server.js
@@ -38,16 +40,14 @@ This sample demos the scenarios to aggregate 3D models and 2D drawings.
  
  
 ## Test Steps
-1. download the attached Node.js project. It will load off-line model packages.
-2. install npm modules
-3. run node.js server.js in the root path
-4. in the browser, http://localhost:3003/main.html
-5. click [load second 3D model], one more model is loaded
+1. run node.js server.js in the root path
+2. in the browser, http://localhost:3003/main.html
+3. click [load second 3D model], one more model is loaded
 	open model tree panel. It is the tree of the second model
 	click [switch tree to first 3D model], the tree will refresh to the first model
 	click [switch tree to second 3D model], the tree will refresh to the second model
 	the core method is : _viewer3D.modelstructure.setModel(instanceTree);
-6. click [load second 2D model], one more drawing is loaded
+4. click [load second 2D model], one more drawing is loaded
    working on switching layers. not yet made it work	
 
 ## License
