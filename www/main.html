@@ -6,55 +6,70 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
     <link rel="stylesheet" href="css/bootstrap.min.css"  />
-  
-    <link rel="stylesheet" href="offline-libs/style.css">
-    <link rel="stylesheet" href="css/mystyle.css">
+   <link rel="stylesheet" href="https://developer.api.autodesk.com/viewingservice/v1/viewers/style.min.css"
+          type="text/css">
+
+   <!--  <link rel="stylesheet" href="https://developer.api.autodesk.com/viewingservice/v1/viewers/style.min.css?v=2.14"
+    type="text/css"> -->
+     <link rel="stylesheet" href="css/mystyle.css">
 
     <script src="js/jquery-2.1.2.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
  
-     <script src="offline-libs/viewer3D.js"></script>
+  
+  <script language="JavaScript"
+          src="https://developer.api.autodesk.com/viewingservice/v1/viewers/viewer3D.min.js"></script>
+
+  <script language="JavaScript"
+          src="https://developer.api.autodesk.com/viewingservice/v1/viewers/viewer3D.min.js?v=2.14"></script>
 
     <script src="js/model-structure.js"></script>
 
      <script src="js/main.js"></script>
- 
+  
+
 </head>
 
 
 <body>
 
+
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-sm-6 col-md-3 sidebar">
-                <div class="panel panel-default">
-                    <div class="btn-group-vertical">
+        <div class="row"> 
+            <div>
+             <button type="button" id="btnloadsecond3d" class="btn btn-default btn-lg">load second 3D model</button> 
+            <button type="button" id="btnloadsecond2d" class="btn btn-default btn-lg">load second 2D model</button>           
 
-                                <a class="btn btn-primary btn-sm" id="btnLoadSecond">load second model</a>
- 
-                               <a class="btn btn-primary btn-sm" id="btnUnloadSecond">unload second model</a>
-
-                            <a class="btn btn-primary btn-sm" id="btnTransform">transform model after loading</a>
-
-                  </div>
-                
-                </div>
-
+             <button type="button" id="btnswitchfirst3D" class="btn btn-default btn-lg">switch tree to first  3D model</button>  
+            <button type="button" id="btnswitchsecond3D" class="btn btn-default btn-lg">switch tree to second  3D model</button>           
+         
+           <button type="button" id="btnswitchfirst2D" class="btn btn-default btn-lg">switch tree to first  2D model</button>  
+            <button type="button" id="btnswitchsecond2D" class="btn btn-default btn-lg">switch tree to second  2D model</button>   
             </div>
 
-              <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-3 main">
-                <h1 class="sub-header text-center "> 3D model</h1>
+            <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-1 main">
+                <h1 class="sub-header text-center "> 3D 模型</h1>
                 <div class="row placeholders">
                     <div class="col-xs-6 col-sm-12 placeholder">
                          <div id="viewer3D" name="3d"/>
                     </div>
                 </div>
-                
-              </div>
+                <h1 class="sub-header">2D 图纸</h1>
+                <div class="row placeholders">
+                    <div class="col-xs-6 col-sm-12 placeholder">
 
+                      <div id="viewer2D" name="2d"/>
+                    </div>
+
+                </div>
             </div>
+  
           </div>
 
- </body>
+    </div>
+
+
+
+</body>
 
 </html>
