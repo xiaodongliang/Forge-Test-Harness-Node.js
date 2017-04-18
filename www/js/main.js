@@ -75,6 +75,7 @@ var _2D_models =
 
             //maybe this method could help? 
            // viewer.layersPanel.setLayers();
+           //or manipulate initLayersTexture ?
 
     }
     else
@@ -272,7 +273,8 @@ $(document).ready (function () {
             //******/
 
             //maybe this method could help? 
-           // _viewer2D.layersPanel.setLayers();
+             // viewer.layersPanel.setLayers();
+           //or manipulate initLayersTexture ?
       });
 
        $('#btnswitchsecond2D').click (function (evt) {
@@ -288,7 +290,8 @@ $(document).ready (function () {
             //******/
 
             //maybe this method could help? 
-           // _viewer2D.layersPanel.setLayers();
+             // viewer.layersPanel.setLayers();
+           //or manipulate initLayersTexture ?
       });
 }) ;
 
