@@ -186,6 +186,8 @@ function loadViewerModel(viewer,modelindex,is2d)
     var mat = new THREE.Matrix4();
 
     mat.makeTranslation(50,50,0);
+    //mat.makeScale(0.5,0.5,0.5);
+
     var loadOptions = {
         placementTransform:  mat,
         modelSpace:true
